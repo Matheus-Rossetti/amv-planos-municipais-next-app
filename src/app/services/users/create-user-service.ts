@@ -27,6 +27,12 @@ export async function createUserService({email, password, name, admin, city}: Pa
     if (!cities.includes(city)) throw new Error(`${city} não é uma cidade válida`)
     if (name.length > 100) throw new Error('nome muito longo')
 
+    //TODO: caso admin === true, verificar se o usuário que está criando o novo usuário é admin
+    //TODO: como fazer isso? Não sei, provavelmente através de JWT
+    //TODO: é mais por segurança, já que somente usuários admin podem acessar a página 'admin'
+    //TODO: mas vai que algum maluco tenta enviar uma req alterando o id para um id de admin
+    //TODO: então tenho que verificar se o admin em questão está autenticado com JWT
+
     password = await hashPassword(password);
     await insertNewUser({email: email, password: password, admin: admin, name: name, city: city})
 
