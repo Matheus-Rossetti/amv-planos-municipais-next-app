@@ -14,17 +14,20 @@ const client = new Client({
 export async function dbConnect(){
     try {
         await client.connect();
-        console.log("Connected established");
+        console.log("Conexão estabelecida");
+        return client;
     } catch (e){
-        console.log("Error: ", e)
+        console.log("Erro: ", e)
+        throw new Error("A conexão com o banco de dados falhou");
     }
 }
 
 export async function dbDisconnect(){
     try {
         await client.end();
-        console.log("Connection finished");
+        console.log("Conexão finalizada");
+        return client;
     } catch (e){
-        console.log("Error: ", e)
+        console.log("Erro: ", e)
     }
 }

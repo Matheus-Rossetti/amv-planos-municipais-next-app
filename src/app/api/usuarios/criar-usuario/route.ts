@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { addUser } from "@/app/db/user";
+import { addUser } from "@/app/db/users/user";
 import {stopSqlInjection} from "@/app/utils/sql_injection_prevention";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
