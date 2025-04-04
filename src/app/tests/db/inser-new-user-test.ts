@@ -1,6 +1,5 @@
 import { insertNewUser } from "@/app/db/users/insert-new-user";
 
-
 insertNewUser({
     email: "teste@gmail.com",
     password: "123456",
