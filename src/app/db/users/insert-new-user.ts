@@ -19,11 +19,10 @@ export async function insertNewUser({email, password, admin, name, city}: UserPa
         `;
         const values = [email, password, admin, name, city];
         await client.query(query, values);
-        console.log(`Usuario ${name} inserido com sucesso`);
         await dbDisconnect();
     }catch (e){
-        console.log("Erro: ", e);
         await dbDisconnect();
-        throw new Error("Não foi possível inserir o usuário no banco de dados");
+        // @ts-expect-error - ts complains about e being undefined, but it will always be string
+        throw new Error("Não foi possível inserir o usuário no banco de dados", e.message);
     }
 }
