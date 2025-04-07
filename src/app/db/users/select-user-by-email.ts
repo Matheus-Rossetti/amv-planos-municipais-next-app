@@ -9,17 +9,19 @@ export async function selectUserByEmail({email}: UserParams){
 
     try {
         const query = `
-            SELECT * FROM usuarios WHERE email = $1
+            SELECT id, created_at, nome, email, senha, admin, municipio FROM usuarios WHERE email = $1
         `;
         const values = [email];
         const result = await client.query(query, values);
         await dbDisconnect(client);
-        console.log("Resultado: ", result);
+
+        console.log("Resultado: ", result.rows);
+        return result.rows;
     }catch (e){
         console.log("Erro: ", e);
         await dbDisconnect(client);
         // @ts-expect-error - ts complains about 'e' being -undefined-, but 'e' is always -string-
-        throw new Error(`Usuário não encontrado: ${e.message}`);
+        throw new Error(`Erro: ${e.message}`);
     }
 
 }

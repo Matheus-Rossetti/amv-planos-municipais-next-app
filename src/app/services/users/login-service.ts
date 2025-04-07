@@ -8,8 +8,9 @@ interface UserParams {
 
 export async function loginService({email, password}: UserParams) {
 
-    console.log(password)
+    const result = await selectUserByEmail({email: email})
 
-    await selectUserByEmail({email: email})
-    return
+    if(result.length == 0) throw new Error("Usuário não encontrado");
+
+    return result
 }
