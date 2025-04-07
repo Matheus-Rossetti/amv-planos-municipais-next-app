@@ -20,8 +20,8 @@ export async function POST(req: Request) {
     // ------ GETTING USER ------
 
     try {
-        const user = await loginService({email: email, password: '123456'});
-        return NextResponse.json(user, {status: 200});
+        const token = await loginService({email: email, password: password});
+        return NextResponse.json({message: 'Login efetuado com sucesso', token: token}, {status: 200});
     }catch (e){
         // @ts-expect-error - ts complains about 'e' being -undefined-, but 'e' is always -string-
         return NextResponse.json({message: `Erro: ${e.message}`}, {status: 500});

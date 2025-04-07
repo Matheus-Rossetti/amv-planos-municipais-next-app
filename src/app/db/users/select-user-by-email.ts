@@ -15,7 +15,6 @@ export async function selectUserByEmail({email}: UserParams){
         const result = await client.query(query, values);
         await dbDisconnect(client);
 
-        console.log("Resultado: ", result.rows);
         return result.rows;
     }catch (e){
         console.log("Erro: ", e);
