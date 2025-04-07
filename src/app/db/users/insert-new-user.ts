@@ -23,7 +23,7 @@ export async function insertNewUser({email, password, admin, name, city}: UserPa
     }catch (e){
         await dbDisconnect(client);
         // @ts-expect-error - ts complains about 'e' being -undefined-, but 'e' is always -string-
-        console.log("AQUI ESTÁ O E.MESSAGE: ", e.message.toString());
+        console.log("AQUI ESTÁ O E.MESSAGE: ", e.message);
         // @ts-expect-error - ts complains about 'e' being -undefined-, but 'e' is always -string-
         throw new Error(`Não foi possível inserir o usuário no banco de dados: ${e.message}`);
     }

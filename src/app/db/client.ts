@@ -19,7 +19,7 @@ export async function dbConnect(){
     } catch (e){
         console.log("Erro: ", e)
         // @ts-expect-error - ts complains about 'e' being -undefined-, but 'e' is always -string-
-        throw new Error("A conexão com o banco de dados falhou", e.message);
+        throw new Error(`A conexão com o banco de dados falhou ${e.message}`);
     }
 }
 
