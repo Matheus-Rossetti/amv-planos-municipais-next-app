@@ -1,10 +1,14 @@
+export function stopSqlInjection(body){
 
-// Checa se uma string começa ou termina com caractere especial
-export function stopSqlInjection(input: unknown): boolean {
-    if (typeof input !== 'string') {
-        return false;
+    const specialChars = /[!@#$%^&*(),.?":{}|<>']/;
+
+
+
+    for (const key in body) {
+        specialChars.test(key.charAt(0)) || specialChars.test(key.charAt(key.length - 1));
     }
 
-    const specialChars = /[!@#$%^&*(),.?":{}|<>]/;
-    return specialChars.test(input.charAt(0)) || specialChars.test(input.charAt(input.length - 1));
+
+
+    return
 }

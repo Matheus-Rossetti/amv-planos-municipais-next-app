@@ -37,9 +37,11 @@ export async function createUserService({email, password, name, admin, city}: Pa
     try {
         await insertNewUser({email: email, password: password, admin: admin, name: name, city: city})
     } catch (e){
-        // console.log("Erro: ", e);
+        console.log("Erro: ", e);
+
+
         // @ts-expect-error - ts complains about e being undefined, but it will always be string
-        throw new Error(e.message);
+        throw new Error(e);
     }
     return
 }

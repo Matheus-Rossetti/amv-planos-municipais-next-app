@@ -1,10 +1,11 @@
-import {createUserService} from '@/app/services/users/create-user-service'
-import {NextResponse} from "next/server";
-import {validApiKey} from "@/app/utils/valid-api-key";
+import { createUserService } from '@/app/services/users/create-user-service'
+import { NextResponse } from "next/server";
+import { validApiKey } from "@/app/utils/valid-api-key";
+import { stopSqlInjection } from "@/app/utils/sql_injection_prevention";
 
 export async function POST(req: Request) {
 
-    const { searchParams } = new URL(req.url);
+    const { searchParams } = new URL(req.url); // 'searchParams' needs brackets, don't know why
     const apiKey = searchParams.get('apiKey');
 
     // ------ ERROR HANDLING ------
@@ -12,7 +13,7 @@ export async function POST(req: Request) {
     if(!validApiKey(apiKey)) return NextResponse.json({message: 'chave de api inválida'}, {status: 401});
 
     const body = await req.json().catch(() => "");
-    const {email, password, admin, name, city} = body; // Can't get parameter is the catch above == null
+    const { email, password, admin, name, city } = stopSqlInjection(body); // Can't get parameter if the catch above == null
 
     if (!email || !password || !admin || !name || !city) {
         return NextResponse.json({message: 'body deveria conter: email, password, admin, name e city'},

@@ -1,10 +1,10 @@
-import { Client } from 'pg';
+import {Pool, PoolClient} from 'pg';
 
-const client = new Client({
-    user: 'M7Zp5PvIxi32q30tH9zTQ',
-    host: 'projetos-municipais-postgres-db.postgres.database.azure.com',
-    database: 'postgres',
-    password: "6&8;GF8c9V5K]Y:wXd_vD|%j\'*MaVI",
+const pool = new Pool({
+    user: process.env.DB_USER,
+    host: process.env.DB_HOST,
+    database: process.env.DB,
+    password: process.env.DB_PASSWORD,
     port: 5432,
     ssl: {
         rejectUnauthorized: false
@@ -13,19 +13,19 @@ const client = new Client({
 
 export async function dbConnect(){
     try {
-        await client.connect();
+        const client = await pool.connect();
         console.log("Conexão estabelecida");
         return client;
     } catch (e){
         console.log("Erro: ", e)
-        // @ts-expect-error - ts complains about e being undefined, but it will always be string
+        // @ts-expect-error - ts complains about 'e' being -undefined-, but 'e' is always -string-
         throw new Error("A conexão com o banco de dados falhou", e.message);
     }
 }
 
-export async function dbDisconnect(){
+export async function dbDisconnect(client: PoolClient){
     try {
-        await client.end();
+        client.release();
         console.log("Conexão finalizada");
         return client;
     } catch (e){
