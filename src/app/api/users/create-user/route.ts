@@ -10,12 +10,13 @@ export async function POST(req: Request) {
     const apiKey = searchParams.get('apiKey');
     if(!validApiKey(apiKey)) return NextResponse.json({message: 'chave de api inválida'}, {status: 401});
 
-    const { email, password, admin, name, city } = await req.json().catch(() =>
-    {
+    const { email, password, admin, name, city } = await req.json()
+
+    if (!email || !password || !admin || !name || !city) {
         return NextResponse.json({message: 'body deveria conter: email, password, admin, name e city'},
             {status: 400});
     }
-    )
+
     // ------ CREATING USER ------
 
     try {
