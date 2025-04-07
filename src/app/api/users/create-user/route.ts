@@ -2,13 +2,14 @@ import { createUserService } from '@/app/services/users/create-user-service'
 import { NextResponse } from "next/server";
 import { validApiKey } from "@/app/utils/valid-api-key";
 
+// url/api/users/create-user
 export async function POST(req: Request) {
 
     // ------ ERROR HANDLING ------
 
-    const { searchParams } = new URL(req.url); // 'searchParams' needs brackets, don't know why
-    const apiKey = searchParams.get('apiKey');
-    if(!validApiKey(apiKey)) return NextResponse.json({message: 'chave de api inválida'}, {status: 401});
+    // Verifica se a chave de API é válida
+    if(!validApiKey(new URL(req.url).searchParams.get('apiKey')))
+        return NextResponse.json({message: 'chave de api inválida'}, {status: 401});
 
     const { email, password, admin, name, city } = await req.json()
 
