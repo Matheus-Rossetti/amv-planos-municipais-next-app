@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
-import { validApiKey } from "@/app/utils/valid-api-key";
-import {loginService} from "@/app/services/users/login-service";
+import { validApiKey } from "@/utils/valid-api-key";
+import {loginService} from "@/services/users/login-service";
 
 // url/api/users/login
 export async function POST(req: Request) {

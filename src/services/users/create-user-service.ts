@@ -1,6 +1,6 @@
-import { insertNewUser } from "@/app/db/users/insert-new-user"
-import { isEmail } from "@/app/utils/is-email";
-import { hashPassword} from "@/app/utils/hash-password";
+import { insertNewUser } from "@/db/users/insert-new-user"
+import { isEmail } from "@/utils/is-email";
+import { hashPassword} from "@/utils/hash-password";
 
 interface Params{
     email: string;
