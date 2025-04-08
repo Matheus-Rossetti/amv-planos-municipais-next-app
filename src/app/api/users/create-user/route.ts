@@ -1,6 +1,6 @@
-import { createUserService } from '@/app/services/users/create-user-service'
+import { createUserService } from '@/services/users/create-user-service'
 import { NextResponse } from "next/server";
-import { validApiKey } from "@/app/utils/valid-api-key";
+import { validApiKey } from "@/utils/valid-api-key";
 
 // url/api/users/create-user
 export async function POST(req: Request) {
