@@ -1,6 +1,5 @@
 import { selectUserByEmail } from "@/db/users/select-user-by-email";
 import {compareHash} from "@/utils/compare_hash";
-import {hashPassword} from "@/utils/hash-password";
 
 interface UserParams {
     email: string;
@@ -14,11 +13,13 @@ export async function loginService({email, password}: UserParams) {
     // selectUserByEmail returns an empty array if the user isn't found, therefore the need for the following check
     if(result.length == 0) throw new Error("Usuário não encontrado");
 
-    const dbPassword = result[0].senha // ia codou isso aqui, cagou tudo
+    const dbPassword = result[0].senha
 
     const isRightPassword = await compareHash(password, dbPassword)
 
     if(!isRightPassword) throw new Error("Senha incorreta");
+
+    //TODO fazer auth com JWT
 
     const token = "Token Povisório"
 
