@@ -22,10 +22,9 @@ export async function POST(req: Request) {
 
     try {
         await createUserService({email: email, password: password, admin: admin, name: name, city: city})
-            .then(r => {console.log(r)})
                 return NextResponse.json({message: `Usuário ${name} criado com sucesso!`});
     } catch (e) {
-        // @ts-expect-error - ts complains about e being undefined, but it will always be string
+        // @ts-expect-error - ts complains about 'e' being undefined, but it will always be string
         return NextResponse.json({message: 'Falha ao criar o usuário: ', error: e.message}, {status: 400});
     }
 }

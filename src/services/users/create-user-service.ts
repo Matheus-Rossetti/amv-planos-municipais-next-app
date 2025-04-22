@@ -23,7 +23,6 @@ export async function createUserService({email, password, name, admin, city}: Pa
     ]
 
     if (!isEmail(email)) throw new Error(`${email} não é um email`)
-    if (!password) throw new Error('senha vazia')
     if (!cities.includes(city)) throw new Error(`${city} não é uma cidade válida`)
     if (name.length > 100) throw new Error('nome muito longo')
 
@@ -38,8 +37,6 @@ export async function createUserService({email, password, name, admin, city}: Pa
         await insertNewUser({email: email, password: password, admin: admin, name: name, city: city})
     } catch (e){
         console.log("Erro: ", e);
-
-
         // @ts-expect-error - ts complains about e being undefined, but it will always be string
         throw new Error(e);
     }
