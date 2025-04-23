@@ -1,4 +1,4 @@
-import {dbConnect, dbDisconnect} from "@/app/db/client";
+import {dbConnect, dbDisconnect} from "@/db/client";
 
 interface UserParams {
     email: string;
