@@ -5,6 +5,7 @@ import {getPlanService} from "@/services/plans/get-plan-service";
 
 export async function GET(req: NextRequest) {
 
+    // guarda o 'id' de parametro da url
     const id:number = Number(new URL(req.url).searchParams.get('id'))
 
     try{

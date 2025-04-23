@@ -7,6 +7,9 @@ export async function POST(req: Request) {
 
     const { user, planName, description, validity, authority, objective, law, status } = await req.json()
 
+    // TODO verificar chave da api antes de continuar
+    // new URL(req.url).searchParams.get('apiKey')
+
     try{
         await createPlanService({
             user: user,
