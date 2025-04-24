@@ -10,7 +10,7 @@ export async function GET(req: NextRequest) {
 
     try{
         const result = await getPlanService({id: id})
-        return NextResponse.json({result});
+        return NextResponse.json(result);
     }catch (e){
         // @ts-expect-error - ts complains about 'e' being -undefined-, but 'e' is always -string-
         return NextResponse.json({message: 'Falha ao recuperar o plano: ', error: e.message}, {status: 400});

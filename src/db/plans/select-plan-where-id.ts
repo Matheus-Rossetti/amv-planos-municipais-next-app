@@ -15,7 +15,7 @@ export async function selectPlanWhereId({id}: Params) {
         const result = await client.query(query, values);
         await dbDisconnect(client);
 
-        return result.rows;
+        return result.rows[0];
     }catch (e){
         await dbDisconnect(client)
         console.log(e)

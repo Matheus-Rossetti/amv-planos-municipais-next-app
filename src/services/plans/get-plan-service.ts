@@ -6,9 +6,5 @@ interface Params{
 
 
 export async function getPlanService({id}: Params){
-
-
-
-
     return await selectPlanWhereId({id: id});
 }

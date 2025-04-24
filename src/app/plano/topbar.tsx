@@ -6,20 +6,24 @@ export const TopBar = ({planName, color}:{planName: string, color: BackgroundCol
     return (
         <div style={{
             backgroundColor: color,
-            padding: "20px",
-            width: "100vw",
+            maxWidth: "100vw",
             flexDirection: "column",
             height: "17vh",
             display: "flex",
             alignItems: "center" ,
-            justifyContent: "center"
+            // justifyContent: "center",
+            paddingTop: "5vh",
+            boxShadow: "0px 7px 4px rgba(0, 0, 0, 0.25)",
+            position: 'relative',
+            zIndex: 1
         }}>
-            <h1 style={{
+            <div style={{
                 color: "white",
-                fontWeight: "bold"
+                fontWeight: "bolder",
+                fontSize: "xxx-large"
             }}>
                 {planName}
-            </h1>
+            </div>
         </div>
     );
 };
