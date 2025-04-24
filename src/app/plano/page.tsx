@@ -12,7 +12,7 @@ export default async function PlanPage() {
     const plan = await res.json();
 
 
-    const color: BackgroundColor = cityColor(plan.municipio);
+    const color: BackgroundColor = cityColor("São João do Itaperiú");
 
     return (
         <div style={{
@@ -21,7 +21,19 @@ export default async function PlanPage() {
         }}>
             <TopBar planName={plan.nome} color={color} />
              {/*TODO criar abas dinamicas, enviar titulo e index*/}
-            <div style={{paddingLeft: "0.5vw"}}> <Tab tabName={plan.extras.abas[0].nome} color={color}/></div>
+            <div style={{
+                paddingLeft: "0.5vw",
+                paddingRight: "0.5vw",
+                display: "flex",
+                flexDirection: "row"
+            }}>
+                <Tab tabName={plan.extras.abas[0].nome} color={color}/>
+                <Tab tabName={plan.extras.abas[0].nome} color={color}/>
+                <Tab tabName={plan.extras.abas[0].nome} color={color}/>
+                <Tab tabName={plan.extras.abas[0].nome} color={color}/>
+                <Tab tabName={plan.extras.abas[0].nome} color={color}/>
+                <Tab tabName={plan.extras.abas[0].nome} color={color}/>
+            </div>
             {/*TODO criar os containers de conteúdo dinamicamente com base no json, apenas alguns serão obrigatórios*/}
             <div style={{
                 display: "flex",

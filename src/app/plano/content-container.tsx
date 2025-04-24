@@ -1,6 +1,10 @@
 import React from "react";
 
 export const ContentContainer = ({conteudo, titulo}: {conteudo: string, titulo: string}) => {
+
+   // TODO verificar o tipo que vem do json, 'texto', 'tabela' e tals, e então retornar o Componente equivalente
+
+
     return(
      <div style={{
          backgroundColor: "white",
