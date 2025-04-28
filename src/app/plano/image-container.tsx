@@ -8,17 +8,11 @@ export const ImageContainer = () => {
         <div style={{
             backgroundColor: "white",
             borderRadius: "12px",
-            // padding: "5%"
+            minWidth: "65vw",
+            minHeight: "20vh",
         }}>
-            <div style={{
-                fontSize: "xx-large",
-                paddingTop: "3%",
-                paddingLeft: "6%"
-            }}>imagem</div>
-            <div style={{
-                padding: "15%"
-            }}
-            >imagem</div>
+
+
         </div>
     )
 }

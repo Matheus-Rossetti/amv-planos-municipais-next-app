@@ -5,17 +5,18 @@ export const TextContainer = ({titulo, conteudo}: {titulo: string, conteudo: str
         <div style={{
             backgroundColor: "white",
             borderRadius: "12px",
-            // padding: "5%"
+            minWidth: "65vw",
+            minHeight: "20vh",
         }}>
             <div style={{
                 fontSize: "xx-large",
                 paddingTop: "3%",
                 paddingLeft: "6%"
-            }}>{titulo}</div>
+            }}>teste</div>
             <div style={{
                 padding: "15%"
             }}
-            >{conteudo}</div>
+            >teste</div>
         </div>
     )
 }

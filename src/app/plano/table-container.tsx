@@ -8,13 +8,14 @@ export const TableContainer = () => {
         <div style={{
             backgroundColor: "white",
             borderRadius: "12px",
-            // padding: "5%"
+            minWidth: "65vw",
+            minHeight: "20vh",
         }}>
             <div style={{
                 fontSize: "xx-large",
                 paddingTop: "3%",
                 paddingLeft: "6%"
-            }}>tebela</div>
+            }}>tabela</div>
             <div style={{
                 padding: "15%"
             }}

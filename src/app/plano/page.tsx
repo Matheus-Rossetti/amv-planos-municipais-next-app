@@ -59,11 +59,11 @@ export default async function PlanPage() {
                 }, index: number) =>{
                             switch(campo.tipo){
                                 case 'texto':
-                                    return <div key={index}> <TextContainer titulo={campo.titulo} conteudo={campo.conteudo}/></div>
+                                    return <div key={index} style={{paddingBottom: "3%"}}> <TextContainer titulo={campo.titulo} conteudo={campo.conteudo}/></div>
                                 case 'imagem':
-                                    return <div key={index}>  <ImageContainer/> </div>
+                                    return <div key={index} style={{paddingBottom: "3%"}}>  <ImageContainer/> </div>
                                 case 'tabela':
-                                    return <div key={index}> <TableContainer/> </div>
+                                    return <div key={index} style={{paddingBottom: "3%"}}> <TableContainer/> </div>
                             }
                         })}
 
