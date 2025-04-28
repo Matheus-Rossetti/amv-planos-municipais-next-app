@@ -1,0 +1,24 @@
+"use client"
+
+import React from 'react';
+
+export const TableContainer = () => {
+
+    return (
+        <div style={{
+            backgroundColor: "white",
+            borderRadius: "12px",
+            // padding: "5%"
+        }}>
+            <div style={{
+                fontSize: "xx-large",
+                paddingTop: "3%",
+                paddingLeft: "6%"
+            }}>tebela</div>
+            <div style={{
+                padding: "15%"
+            }}
+            >tabela</div>
+        </div>
+)
+}
