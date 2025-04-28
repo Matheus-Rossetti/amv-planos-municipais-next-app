@@ -8,7 +8,7 @@ export const TableContainer = () => {
         <div style={{
             backgroundColor: "white",
             borderRadius: "12px",
-            minWidth: "65vw",
+            width: "75vw",
             minHeight: "20vh",
         }}>
             <div style={{
