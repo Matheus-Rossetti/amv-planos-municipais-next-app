@@ -27,12 +27,12 @@ export default async function PlanPage() {
                 display: "flex",
                 flexDirection: "row"
             }}>
-                <Tab tabName={plan.extras.abas[0].nome} color={color}/>
-                <Tab tabName={plan.extras.abas[0].nome} color={color}/>
-                <Tab tabName={plan.extras.abas[0].nome} color={color}/>
-                <Tab tabName={plan.extras.abas[0].nome} color={color}/>
-                <Tab tabName={plan.extras.abas[0].nome} color={color}/>
-                <Tab tabName={plan.extras.abas[0].nome} color={color}/>
+                {plan.extras.abas.map((aba: { nome: string }, index: number) => (
+                    <div key={ index }>
+                        <Tab tabName={ aba.nome } color={ color }/>
+                    </div>
+                ))}
+
             </div>
             {/*TODO criar os containers de conteúdo dinamicamente com base no json, apenas alguns serão obrigatórios*/}
             <div style={{
