@@ -1,6 +1,7 @@
 import React from "react";
 
 export const TextContainer = ({titulo, conteudo}: {titulo: string, conteudo: string}) => {
+
     return (
         <div style={{
             backgroundColor: "white",

@@ -16,6 +16,8 @@ export default async function PlanPage() {
 
     const color: BackgroundColor = cityColor(plan.municipio);
 
+    const imageErray: string[] = ["https://picsum.photos/1920/1080", "https://picsum.photos/1920/1080", "https://picsum.photos/1920/1080", "https://picsum.photos/1920/1080", "https://picsum.photos/1920/1080", "https://picsum.photos/1920/1080", "https://picsum.photos/1920/1080", "https://picsum.photos/1920/1080", "https://picsum.photos/1920/1080", ]
+
     return (
         <div style={{
             backgroundColor: "#F3EFE8",
@@ -61,7 +63,10 @@ export default async function PlanPage() {
                                 case 'texto':
                                     return <div key={index} style={{paddingBottom: "3%"}}> <TextContainer titulo={campo.titulo} conteudo={campo.conteudo}/></div>
                                 case 'imagem':
-                                    return <div key={index} style={{paddingBottom: "3%"}}>  <ImageContainer/> </div>
+                                    return <div key={index} style={{paddingBottom: "3%"}}>
+                                        <ImageContainer urls={imageErray}
+                                                        titulo={'Sessão de imagens'}
+                                                        legenda={campo.legenda}/> </div>
                                 case 'tabela':
                                     return <div key={index} style={{paddingBottom: "3%"}}> <TableContainer/> </div>
                             }
