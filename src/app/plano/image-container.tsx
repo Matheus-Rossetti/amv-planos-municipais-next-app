@@ -23,15 +23,16 @@ export const ImageContainer = ({urls, legenda, titulo}:{urls: string[], legenda:
             }}>
                 {titulo}
             </div>
+
             {/* -------- IMAGE_GRID -------- */}
             <div style={{
-                paddingLeft: '15%',
-                paddingRight: '15%',
+                paddingLeft: '10%',
+                paddingRight: '10%',
                 paddingTop: '7%',
                 paddingBottom: '7%',
                 display: "grid",
                 gridTemplateColumns: "repeat(3, 1fr)",
-                gap: "1%",
+                gap: "2%",
             }}>
             {urls.map((url: string, index: number)=> (
                 <div key={ index } style={{
@@ -39,10 +40,15 @@ export const ImageContainer = ({urls, legenda, titulo}:{urls: string[], legenda:
                     flexDirection: 'column'
                 }}>
                     <div style={{
-
-                    }}>{legenda}</div>
+                        width: '100%',
+                        wordWrap: 'break-word',
+                        paddingLeft: '2%',
+                        paddingBottom: '2%',
+                        fontWeight: 'bold',
+                    }}>fjepjweppgewkgiwehnigieweoewhniogedsfdadavsasdfaefevvfefgwegweegdsfvhn</div>
                     <img src={ url } alt={legenda} style={{
                         width: '100%',
+                        borderRadius: '10px',
                     }} />
                 </div>
             ))}

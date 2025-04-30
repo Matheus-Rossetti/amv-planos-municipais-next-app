@@ -17,7 +17,10 @@ export const TextContainer = ({titulo, conteudo}: {titulo: string, conteudo: str
             }}>{titulo}</div>
             {/*conteudo*/}
             <div style={{
-                padding: "15%"
+                paddingLeft: "10%",
+                paddingRight: "10%",
+                paddingBottom: '7%',
+                paddingTop: '7%',
             }}
             >{conteudo}</div>
         </div>
