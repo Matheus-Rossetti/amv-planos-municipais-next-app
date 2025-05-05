@@ -1,25 +1,21 @@
-interface Params {
-    name: string;
-    description: string;
-    city: string;
-    validity: string;
-    objective: string;
-    law: string;
-    status: string;
-    extras: { [key: string]: unknown }
-}
+export class Plan {
+    constructor(
+        public id: number,
+        public name: string,
+        public description: string,
+        public city: string,
+        public startDate: number,
+        public endDate: number,
+        public archived: boolean,
+        public version: number,
+        public parentId: number | null,
+        public startingTab: { [key: string]: unknown },
+        public preparationTab: { [key: string]: unknown },
+        public goalsTab: { [key: string]: unknown }, // metas
+        public extraTabs: { [key: string]: unknown }, // map/json
 
-export class PlanModel {
-    name: string;
-    description: string;
-    city: string;
-    validity: string;
-    objective: string;
-    law: string;
-    status: string;
-    extras: { [key: string]: unknown };
+    ) {
 
-    constructor({ name, description, validity, objective, law, status, extras, city}: Params) {
         this.name = name;
         this.description = description;
         this.city = city;
@@ -31,3 +27,11 @@ export class PlanModel {
     }
 
 }
+
+// Plan fields are only fix information, modular information
+
+// startingTab {
+//      description: text,
+//      objectives: {},
+//      legalBase: text,
+// }
