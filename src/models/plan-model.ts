@@ -19,10 +19,8 @@ export class Plan {
         public libraryTab: { [key: string]: unknown },
         public extraTabs: { [key: string]: unknown },
     ) {}
-
-
-
 }
+
 // Plan fields are only fix information and tab, information inside the tabs are modular
 
 // startingTab {
@@ -30,17 +28,17 @@ export class Plan {
 //          {
 //              containerType: "text",
 //              containerName: "Descrição",
-//              containerContent: text,
+//              containerContent: [],
 //          }
 //          {
 //              containerType: "text",
 //              containerName: "Objetivos",
-//              containerContent: text,
+//              containerContent: [],
 //          }
 //          {
 //              containerType: "text",
 //              containerName: "Base legal",
-//              containerContent: text
+//              containerContent: [],
 //          }
 //      ]
 // }
@@ -50,7 +48,7 @@ export class Plan {
 //          {
 //              containerType: "",
 //              containerName: "",
-//              containerContent: "",
+//              containerContent: [],
 //          }
 //      ]
 //}
@@ -72,12 +70,12 @@ export class Plan {
 //              {
 //                  containerType: "",
 //                  containerName: "",
-//                  containerContent: "",
+//                  containerContent: [],
 //              }
 //              {
 //                  containerType: "",
 //                  containerName: "",
-//                  containerContent: "",
+//                  containerContent: [],
 //              }
 //          ]
 //      }
@@ -87,12 +85,12 @@ export class Plan {
 //              {
 //                  containerType: "",
 //                  containerName: "",
-//                  containerContent: "",
+//                  containerContent: [],
 //              }
 //              {
 //                  containerType: "",
 //                  containerName: "",
-//                  containerContent: "",
+//                  containerContent: [],
 //              }
 //          ]
 //      }
