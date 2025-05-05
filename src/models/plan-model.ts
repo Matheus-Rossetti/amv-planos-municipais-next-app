@@ -1,6 +1,8 @@
 export class Plan {
     constructor(
         public id: number,
+        public creationAt: string,
+        public createdBy: number,
         public name: string,
         public description: string,
         public city: string,
@@ -9,29 +11,89 @@ export class Plan {
         public archived: boolean,
         public version: number,
         public parentId: number | null,
+        public lastModified: string,
         public startingTab: { [key: string]: unknown },
         public preparationTab: { [key: string]: unknown },
+        public lawTab:  { [key: string]: unknown },
         public goalsTab: { [key: string]: unknown }, // metas
-        public extraTabs: { [key: string]: unknown }, // map/json
+        public libraryTab: { [key: string]: unknown },
+        public extraTabs: { [key: string]: unknown },
+    ) {}
 
-    ) {
 
-        this.name = name;
-        this.description = description;
-        this.city = city;
-        this.validity = validity;
-        this.objective = objective;
-        this.law = law;
-        this.status = status;
-        this.extras = extras;
-    }
 
 }
-
-// Plan fields are only fix information, modular information
+// Plan fields are only fix information and tab, information inside the tabs are modular
 
 // startingTab {
-//      description: text,
-//      objectives: {},
-//      legalBase: text,
+//      containers: [
+//          {
+//              containerType: "text",
+//              containerName: "Descrição",
+//              containerContent: text,
+//          }
+//          {
+//              containerType: "text",
+//              containerName: "Objetivos",
+//              containerContent: text,
+//          }
+//          {
+//              containerType: "text",
+//              containerName: "Base legal",
+//              containerContent: text
+//          }
+//      ]
 // }
+
+// preparationsTab {
+//      containers: [
+//          {
+//              containerType: "",
+//              containerName: "",
+//              containerContent: "",
+//          }
+//      ]
+//}
+
+// lawTab {
+//      text: link,
+//      text: link,
+//}
+
+// libraryTab {
+//      text: link,
+//      text: link,
+//}
+
+// extraTabs [
+//      {
+//          tabName: 'text',
+//          containers: [
+//              {
+//                  containerType: "",
+//                  containerName: "",
+//                  containerContent: "",
+//              }
+//              {
+//                  containerType: "",
+//                  containerName: "",
+//                  containerContent: "",
+//              }
+//          ]
+//      }
+//      {
+//          tabName: 'text',
+//          containers: [
+//              {
+//                  containerType: "",
+//                  containerName: "",
+//                  containerContent: "",
+//              }
+//              {
+//                  containerType: "",
+//                  containerName: "",
+//                  containerContent: "",
+//              }
+//          ]
+//      }
+//]
