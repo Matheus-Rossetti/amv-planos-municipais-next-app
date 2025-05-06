@@ -2,21 +2,16 @@ import React from "react";
 import { Property } from "csstype";
 import BackgroundColor = Property.BackgroundColor;
 import { cityColor } from "@/utils/city-color";
-import { TopBar } from "@/app/plano/topbar";
-import { Tab } from "@/app/plano/tab";
-import { TextContainer } from "./text-container";
-import { ImageContainer } from "@/app/plano/image-container";
-import { TableContainer } from "@/app/plano/table-container";
+import { TopBar} from "./topbar";
+import { Tab } from "./tab";
+import {TextContainer} from "./text-container";
 
 export default async function PlanPage() {
 
     const res = await fetch(`http://localhost:3000/api/plans/get-plan?id=1`);
     const plan = await res.json();
 
-
     const color: BackgroundColor = cityColor(plan.municipio);
-
-    const imageErray: string[] = ["https://picsum.photos/1920/1080", "https://picsum.photos/1920/1080", "https://picsum.photos/1920/1080", "https://picsum.photos/1920/1080", "https://picsum.photos/1920/1080", "https://picsum.photos/1920/1080", "https://picsum.photos/1920/1080", "https://picsum.photos/1920/1080", "https://picsum.photos/1920/1080", ]
 
     return (
         <div style={{
@@ -62,13 +57,6 @@ export default async function PlanPage() {
                             switch(campo.tipo){
                                 case 'texto':
                                     return <div key={index} style={{paddingBottom: "3%"}}> <TextContainer titulo={campo.titulo} conteudo={campo.conteudo}/></div>
-                                case 'imagem':
-                                    return <div key={index} style={{paddingBottom: "3%"}}>
-                                        <ImageContainer urls={imageErray}
-                                                        titulo={'Sessão de imagens'}
-                                                        legenda={campo.legenda}/> </div>
-                                case 'tabela':
-                                    return <div key={index} style={{paddingBottom: "3%"}}> <TableContainer/> </div>
                             }
                         })}
 

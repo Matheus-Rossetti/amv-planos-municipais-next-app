@@ -1,4 +1,8 @@
+import {Property} from "csstype";
+import BackgroundColor = Property.BackgroundColor;
+
 export interface TextContainerInterface {
-    containerName: string,
+    containerTitle: string,
     text: string,
+    backgroundColor: BackgroundColor,
 }
