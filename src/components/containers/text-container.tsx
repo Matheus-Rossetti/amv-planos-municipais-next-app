@@ -15,21 +15,21 @@ export const TextContainer = ({containerTitle, text, backgroundColor}: TextConta
                 backgroundColor: backgroundColor,
                 fontSize: "xx-large",
                 width: "fit-content",
-                marginTop: "3%",
-                marginLeft: "5%",
+                marginTop: "0.7em",
+                marginLeft: "1em",
+                borderRadius: "10px",
             }}>
                 <div style={{
                     color: "white",
-                    marginTop: 10,
-                    marginBottom: 10,
+                    marginTop: 7,
+                    marginBottom: 7,
                     marginLeft: 20,
                     marginRight: 20,
-
                 }}>
-                    {containerTitle}
+                    { containerTitle }
                 </div>
             </div>
-             {text}
+             { text }
         </div>
     );
 };

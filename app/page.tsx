@@ -21,7 +21,7 @@ export default async function AllContainersPage(){
                 width: "50vw",
                 backgroundColor: color,
             }}></div>
-            <TextContainer containerTitle={'Descrição aqkhuwehgiwenijwenjigewnhgjewn'} text={'Texto'} backgroundColor={color}></TextContainer>
+            <TextContainer containerTitle={'Descrição'} text={'Texto'} backgroundColor={color}></TextContainer>
         </div>
 
 
