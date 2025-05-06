@@ -1,0 +1,47 @@
+
+// REMOVE COMMENTS WHEN USING THE JSON
+
+// Text Container
+[
+  {
+    "containerTitle": "",
+    "text": ""
+  }
+]
+
+// List Container
+[
+  {
+    "containerTitle": "",
+    "lists": [
+      {
+        "listTitle": "",
+        "listNodes": [
+          {
+            "node1": "",
+            "node2": "",
+          }
+        ]
+      }
+      {
+        "listTitle": "",
+        "listNodes": [
+          {
+            "node1": "",
+            "node2": "",
+            "node2": "",
+          }
+        ]
+      }
+    ]
+  }
+]
+
+// Image Container
+
+[
+  {
+    "containerTitle": "",
+    "images": ["link1", "link2", "link3", "link4"]
+  }
+]

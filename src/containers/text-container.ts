@@ -1,4 +1,4 @@
 export interface TextContainer {
-    name: string,
+    containerName: string,
     text: string,
 }
