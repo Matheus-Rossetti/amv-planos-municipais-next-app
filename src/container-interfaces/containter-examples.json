@@ -16,22 +16,11 @@
     "lists": [
       {
         "listTitle": "",
-        "listNodes": [
-          {
-            "node1": "",
-            "node2": "",
-          }
-        ]
+        "items": ["", "", ""]
       }
       {
         "listTitle": "",
-        "listNodes": [
-          {
-            "node1": "",
-            "node2": "",
-            "node2": "",
-          }
-        ]
+        "items": ["", "", ""]
       }
     ]
   }

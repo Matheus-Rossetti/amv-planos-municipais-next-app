@@ -2,7 +2,7 @@ import {Property} from "csstype";
 import BackgroundColor = Property.BackgroundColor;
 
 
-export function cityColor(city: string): BackgroundColor{
+export function getCityColor(city: string): BackgroundColor{
 
     const colors: {[key: string]: BackgroundColor} = {
         "Jaraguá do Sul": "#86C226",

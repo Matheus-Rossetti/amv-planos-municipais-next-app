@@ -11,12 +11,14 @@ export const TextContainer = ({containerTitle, text, backgroundColor}: TextConta
             display: "flex",
             flexDirection: "column",
         }}>
+            {/* ---------- TITLE ---------- */}
             <div style={{
                 backgroundColor: backgroundColor,
                 fontSize: "xx-large",
                 width: "fit-content",
                 marginTop: "0.7em",
                 marginLeft: "1em",
+                marginRight: "1em",
                 borderRadius: "10px",
             }}>
                 <div style={{
@@ -29,7 +31,32 @@ export const TextContainer = ({containerTitle, text, backgroundColor}: TextConta
                     { containerTitle }
                 </div>
             </div>
+            {/* ---------- TEXT ---------- */}
+            <div style={{
+                display: "flex",
+                flexDirection: "row",
+            }}
+            >
+            <div style={{
+                marginTop: "3em",
+                marginBottom: "3em",
+                marginLeft: "10%",
+                marginRight: "5%",
+                lineHeight: "170%",
+            }}>
              { text }
+        </div>
+            <div style={{
+                marginRight: "5%",
+                marginTop: "2em",
+                marginBottom: "2em",
+                backgroundColor: backgroundColor,
+                width: "0.5em",
+                flexShrink: 0,
+                borderRadius: "100px"
+            }}
+            />
+            </div>
         </div>
     );
 };

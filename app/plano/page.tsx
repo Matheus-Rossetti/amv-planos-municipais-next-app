@@ -1,7 +1,7 @@
 import React from "react";
 import { Property } from "csstype";
 import BackgroundColor = Property.BackgroundColor;
-import { cityColor } from "@/utils/city-color";
+import { getCityColor } from "@/utils/get-city-color";
 import { TopBar} from "./topbar";
 import { Tab } from "./tab";
 import {TextContainer} from "./text-container";
@@ -11,7 +11,7 @@ export default async function PlanPage() {
     const res = await fetch(`http://localhost:3000/api/plans/get-plan?id=1`);
     const plan = await res.json();
 
-    const color: BackgroundColor = cityColor(plan.municipio);
+    const color: BackgroundColor = getCityColor(plan.municipio);
 
     return (
         <div style={{
