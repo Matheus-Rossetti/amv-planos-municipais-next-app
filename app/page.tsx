@@ -5,7 +5,7 @@ import {ListComponent} from "@/components/containers/list-component";
 
 export default async function AllContainersPage(){
 
-    const cityColor = getCityColor('Jaraguá do Sul')
+    const cityColor = getCityColor('Massaranduba')
 
     return (
         <div style={{
