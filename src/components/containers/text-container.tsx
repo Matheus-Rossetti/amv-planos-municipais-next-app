@@ -11,6 +11,7 @@ export const TextContainer = ({containerTitle, text, backgroundColor}: TextConta
             display: "flex",
             flexDirection: "column",
         }}>
+
             {/* ---------- TITLE ---------- */}
             <div style={{
                 fontSize: "xx-large",
@@ -27,12 +28,12 @@ export const TextContainer = ({containerTitle, text, backgroundColor}: TextConta
             }}>
                 {containerTitle}
             </div>
+
             {/* ---------- TEXT ---------- */}
             <div style={{
                 display: "flex",
                 flexDirection: "row",
-            }}
-            >
+            }}>
             <div style={{
                 marginTop: "3em",
                 marginBottom: "3em",
