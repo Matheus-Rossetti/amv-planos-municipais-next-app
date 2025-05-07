@@ -24,7 +24,7 @@ export default async function AllContainersPage(){
             }}/>
             <TextContainer containerTitle={'Texto'} text={'Um plano municipal é um documento estratégico elaborado pela prefeitura que define as metas, ações e investimentos para o desenvolvimento de uma cidade em áreas como saúde, educação, mobilidade, meio ambiente e infraestrutura. Ele orienta a gestão pública ao longo de um período (geralmente quatro anos), garantindo que as políticas públicas estejam alinhadas com as necessidades da população e com a legislação vigente.'} backgroundColor={cityColor}></TextContainer>
             <div style={{padding: "1em"}}/>
-            <ListComponent containerTitle={'Lista'} lists={[{"listTitle": "Primeira lista", "items": ["Item 1", "Item 2", "Item 3"]}]} backgroundColor={cityColor}/>
+            <ListComponent containerTitle={'Lista'} lists={[{"listTitle": "Primeira lista", "items": ["Item 1", "Item 2", "Item 3"]}, {"listTitle": "Primeira lista", "items": ["Item 1", "Item 2", "Item 3"]}]} backgroundColor={cityColor}/>
         </div>
 
 

@@ -32,7 +32,25 @@ export const ListComponent = ({containerTitle, lists, backgroundColor}: ListCont
                     { containerTitle }
                 </div>
                 {/* ---------- LISTS ---------- */}
-
+                {lists.map((list) => (
+                    <div key={list.listTitle}>
+                        {/* --- LIST TITLE --- */}
+                        <div>
+                            {list.listTitle}
+                        </div>
+                        {/* --- LIST ITEMS --- */}
+                        <div>
+                            {list.items.map((item, index) => (
+                                <div key={index}>
+                                    {/* --- ITEM --- */}
+                                    <div>
+                                        {item}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                ))}
             </div>
 
 
