@@ -13,23 +13,19 @@ export const TextContainer = ({containerTitle, text, backgroundColor}: TextConta
         }}>
             {/* ---------- TITLE ---------- */}
             <div style={{
-                backgroundColor: backgroundColor,
                 fontSize: "xx-large",
+                backgroundColor: backgroundColor,
+                color: "white",
                 width: "fit-content",
                 marginTop: "0.7em",
                 marginLeft: "1em",
-                marginRight: "1em",
                 borderRadius: "10px",
+                paddingBottom: 7,
+                paddingTop: 7,
+                paddingLeft: 20,
+                paddingRight: 20,
             }}>
-                <div style={{
-                    color: "white",
-                    marginTop: 7,
-                    marginBottom: 7,
-                    marginLeft: 20,
-                    marginRight: 20,
-                }}>
-                    { containerTitle }
-                </div>
+                {containerTitle}
             </div>
             {/* ---------- TEXT ---------- */}
             <div style={{

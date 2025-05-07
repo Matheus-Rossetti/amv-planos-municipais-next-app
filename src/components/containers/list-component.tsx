@@ -3,9 +3,9 @@ import {ListContainerInterface} from "@/container-interfaces/list-container-inte
 
 export const ListComponent = ({containerTitle, lists, backgroundColor}: ListContainerInterface) => {
 
-    return(
+    return (
         <div style={{
-        backgroundColor: "white",
+            backgroundColor: "white",
             borderRadius: "12px",
             width: "75vw",
             minHeight: "20vh",
@@ -14,34 +14,51 @@ export const ListComponent = ({containerTitle, lists, backgroundColor}: ListCont
         }}>
             {/* ---------- TITLE ---------- */}
             <div style={{
-                backgroundColor: backgroundColor,
                 fontSize: "xx-large",
+                backgroundColor: backgroundColor,
+                color: "white",
                 width: "fit-content",
                 marginTop: "0.7em",
                 marginLeft: "1em",
-                marginRight: "1em",
                 borderRadius: "10px",
+                paddingBottom: 7,
+                paddingTop: 7,
+                paddingLeft: 20,
+                paddingRight: 20,
             }}>
-                <div style={{
-                    color: "white",
-                    marginTop: 7,
-                    marginBottom: 7,
-                    marginLeft: 20,
-                    marginRight: 20,
-                }}>
-                    { containerTitle }
-                </div>
-                {/* ---------- LISTS ---------- */}
-                {lists.map((list) => (
-                    <div key={list.listTitle}>
+                    {containerTitle}
+            </div>
+
+            {/* ---------- LISTS ---------- */}
+            <div style={{
+                marginTop: "3em",
+                marginBottom: "3em",
+                marginLeft: "10%",
+            }}>
+                {lists.map((list, titleKey) => (
+                    <div key={titleKey}>
                         {/* --- LIST TITLE --- */}
-                        <div>
-                            {list.listTitle}
+                        <div style={{
+                            backgroundColor: backgroundColor,
+                            width: "fit-content",
+                            borderRadius: "5px",
+                            fontSize: "x-large",
+                            paddingBottom: 100,
+                            marginTop: 1,
+                        }}>
+                            <div style={{
+                                color: "white",
+                                marginLeft: 10,
+                                marginRight: 10,
+
+                            }}>
+                                {list.listTitle}
+                            </div>
                         </div>
                         {/* --- LIST ITEMS --- */}
                         <div>
-                            {list.items.map((item, index) => (
-                                <div key={index}>
+                            {list.items.map((item, itemKey) => (
+                                <div key={itemKey}>
                                     {/* --- ITEM --- */}
                                     <div>
                                         {item}
@@ -52,8 +69,6 @@ export const ListComponent = ({containerTitle, lists, backgroundColor}: ListCont
                     </div>
                 ))}
             </div>
-
-
 
 
         </div>
