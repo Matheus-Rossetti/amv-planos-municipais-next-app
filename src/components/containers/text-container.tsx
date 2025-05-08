@@ -10,6 +10,7 @@ export const TextContainer = ({containerTitle, text, backgroundColor}: TextConta
             minHeight: "20vh",
             display: "flex",
             flexDirection: "column",
+            marginBottom: "2em",
         }}>
 
             {/* ---------- TITLE ---------- */}
@@ -34,25 +35,26 @@ export const TextContainer = ({containerTitle, text, backgroundColor}: TextConta
                 display: "flex",
                 flexDirection: "row",
             }}>
-            <div style={{
-                marginTop: "3em",
-                marginBottom: "3em",
-                marginLeft: "10%",
-                marginRight: "5%",
-                lineHeight: "170%",
-            }}>
-             { text }
-        </div>
-            <div style={{
-                marginRight: "5%",
-                marginTop: "2em",
-                marginBottom: "2em",
-                backgroundColor: backgroundColor,
-                width: "0.5em",
-                flexShrink: 0,
-                borderRadius: "100px"
-            }}
-            />
+                <div style={{
+                    minHeight: "1px",
+                    width: "100%",
+                    marginTop: "3em",
+                    marginBottom: "3em",
+                    marginLeft: "10%",
+                    marginRight: "5%",
+                    lineHeight: "170%",
+                }}>{text}</div>
+
+                <div style={{
+                    marginRight: "5%",
+                    marginTop: "2em",
+                    marginBottom: "2em",
+                    backgroundColor: backgroundColor,
+                    width: "0.5em",
+                    flexShrink: 0,
+                    borderRadius: "100px"
+                }}
+                />
             </div>
         </div>
     );
