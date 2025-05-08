@@ -35,10 +35,26 @@ export const ImageContainer = ({containerTitle, images, backgroundColor}: ImageC
                 {containerTitle}
             </div>
 
-                <img style={{
-                    width: "50%"
-
+            <div style={{
+                // backgroundColor: "green",
+                marginTop: "3em",
+                marginBottom: "3em",
+                height: "100%",
+                width: "100%",
+                display: "flex",
+                marginLeft: "2em",
+                flexDirection: "row" // TODO tirar a row, apenas para testes
+            }}>
+                <img style={{ // TODO colocar placeholder durante o loading da imagem e adicionar uma animação de fade quando ela terminar de carregar e aparecer
+                    width: "25%",
+                    borderRadius: "15px",
                 }}src={images[0]}/>
+                <img style={{ // TODO colocar placeholder durante o loading da imagem e adicionar uma animação de fade quando ela terminar de carregar e aparecer
+                    marginLeft: "1em",
+                    width: "70%",
+                    borderRadius: "15px",
+                }}src={images[1]}/>
+            </div>
         </div>
     )
 }
