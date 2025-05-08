@@ -57,7 +57,6 @@ export const ListContainer = ({containerTitle, lists, backgroundColor}: ListCont
                         <div style={{
                             display: "flex",
                             flexDirection: "row",
-                            marginTop: "1em",
                             marginBottom: "3%",
                             marginLeft: "5%",
                         }}>

@@ -2,6 +2,7 @@ import React from "react";
 import { getCityColor } from "@/utils/get-city-color";
 import { TextContainer} from "@/components/containers/text-container";
 import { ListContainer } from "@/components/containers/list-container";
+import {ImageContainer} from "@/components/containers/image-container";
 
 export default async function AllContainersPage(){
 
@@ -24,6 +25,7 @@ export default async function AllContainersPage(){
             }}/>
             <TextContainer containerTitle={'Texto'} text={''} backgroundColor={cityColor}></TextContainer>
             <ListContainer containerTitle={'Lista'} lists={[{"listTitle": "Primeira lista", "items": ["Item 1", "Item 2", "Item 3"]}, {"listTitle": "Segunda lista", "items": ["Item 1", "Item 2", "Item 3"]}]} backgroundColor={cityColor}/>
+            <ImageContainer containerTitle={'Imagem'} images={['https://picsum.photos/1920/1080', 'https://picsum.photos/1920/1080']} backgroundColor={cityColor}/>
         </div>
 
 
