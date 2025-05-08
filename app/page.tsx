@@ -6,7 +6,7 @@ import {ImageContainer} from "@/components/containers/image-container";
 
 export default async function AllContainersPage(){
 
-    const cityColor = getCityColor('Jaraguá do Sul')
+    const cityColor = getCityColor('São João do Itaperiú')
 
     return (
         <div style={{
@@ -23,9 +23,9 @@ export default async function AllContainersPage(){
                 width: "50vw",
                 backgroundColor: cityColor,
             }}/>
-            <TextContainer containerTitle={'Texto'} text={''} backgroundColor={cityColor}></TextContainer>
+            <TextContainer containerTitle={'Texto'} text={'hgeohweohoigewweijhgigewhogwenojgjwegopjg ewo gwe ioggwe '} backgroundColor={cityColor}></TextContainer>
             <ListContainer containerTitle={'Lista'} lists={[{"listTitle": "Primeira lista", "items": ["Item 1", "Item 2", "Item 3"]}, {"listTitle": "Segunda lista", "items": ["Item 1", "Item 2", "Item 3"]}]} backgroundColor={cityColor}/>
-            <ImageContainer containerTitle={'Imagem'} images={['https://picsum.photos/1920/1080', 'https://picsum.photos/1920/1080']} backgroundColor={cityColor}/>
+            <ImageContainer containerTitle={'Imagem'} images={['https://picsum.photos/1920/1080']} backgroundColor={cityColor}/>
         </div>
 
 
