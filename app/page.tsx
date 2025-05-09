@@ -22,6 +22,9 @@ export default async function AllContainersPage(){
                 height: "1em",
                 width: "50vw",
                 backgroundColor: cityColor,
+                position: "fixed",
+                top: 0
+
             }}/>
             <TextContainer containerTitle={'Texto '} text={'hgeohweohoigewweijhgigewhogwenojgjwegopjg ewo gwe ioggwe '} backgroundColor={cityColor}></TextContainer>
             <ListContainer containerTitle={'Lista'} lists={[{"listTitle": "Primeira lista", "items": ["Item 1nnnnnnnnnn Item 1nnnnnnnnnnItem 1nnnnnnnnnnItem 1nnnnnnnnnnItem 1nnnnnnnnnnItem 1nnnnnnnnnnItem 1nnnnnnnnnnItem 1nnnnnnnnnnItem 1nnnnnnnnnnItem 1nnnnnnnnnnItem 1nnnnnnnnnnItem 1nnnnnnnnnnItem 1nnnnnnnnnnItem 1nnnnnnnnnnItem 1nnnnnnnnnnItem 1nnnnnnnnnnItem 1nnnnnnnnnnItem 1nnnnnnnnnnItem 1nnnnnnnnnnItem 1nnnnnnnnnnItem 1nnnnnnnnnnItem 1nnnnnnnnnnItem 1nnnnnnnnnnItem 1nnnnnnnnnnItem 1nnnnnnnnnn", "Item 2", "Item 3"]}, {"listTitle": "Segunda lista", "items": ["Item 1", "Item 2", "Item 3"]}]} backgroundColor={cityColor}/>
