@@ -1,12 +1,22 @@
 import React from "react";
 import { ImageContainerInterface } from "@/container-interfaces/image-container-interface";
-import {resolve} from "node:dns";
-
 export const ImageContainer = ({containerTitle, images, backgroundColor}: ImageContainerInterface) => {
 
 
     // TODO refactor this to run when inserting the image url into the db, make a map {"url": "aspectRatio"}
     {/* ---------- LOGIC ---------- */}
+
+    // const imageAmount: number = images.length
+
+
+    const imageSizeMap: Record<number, string> = {
+
+        1.7: "70%",
+        0.5: "25%",
+
+    }
+
+
 
 
     return (
@@ -39,21 +49,23 @@ export const ImageContainer = ({containerTitle, images, backgroundColor}: ImageC
                 // backgroundColor: "green",
                 marginTop: "3em",
                 marginBottom: "3em",
+                marginLeft: "2em",
+                marginRight: "2em",
                 height: "100%",
                 width: "100%",
                 display: "flex",
-                marginLeft: "2em",
                 flexDirection: "row" // TODO tirar a row, apenas para testes
             }}>
                 <img style={{ // TODO colocar placeholder durante o loading da imagem e adicionar uma animação de fade quando ela terminar de carregar e aparecer
-                    width: "25%",
+                    width: imageSizeMap[images[1].aspectRatio],
                     borderRadius: "15px",
-                }}src={images[0]}/>
+                }}src={images[0].url}/>
                 <img style={{ // TODO colocar placeholder durante o loading da imagem e adicionar uma animação de fade quando ela terminar de carregar e aparecer
-                    marginLeft: "1em",
-                    width: "70%",
+                    marginLeft: "2em",
+                    flexShrink: 0,
+                    width: imageSizeMap[images[0].aspectRatio],
                     borderRadius: "15px",
-                }}src={images[1]}/>
+                }}src={images[1].url}/>
             </div>
         </div>
     )
