@@ -1,22 +1,23 @@
 import React from "react";
-import { ImageContainerInterface } from "@/container-interfaces/image-container-interface";
+import {ImageContainerInterface} from "@/container-interfaces/image-container-interface";
+
 export const ImageContainer = ({containerTitle, images, backgroundColor}: ImageContainerInterface) => {
 
 
     // TODO refactor this to run when inserting the image url into the db, make a map {"url": "aspectRatio"}
-    {/* ---------- LOGIC ---------- */}
+    {/* ---------- LOGIC ---------- */
+    }
 
     // const imageAmount: number = images.length
 
 
     const imageSizeMap: Record<number, string> = {
-
-        1.7: "70%",
-        0.5: "25%",
-
+        1.7: "74.3%",
+        0.5: "23.5%",
+        // TODO adicionar o 4:3
     }
 
-
+    // const layout
 
 
     return (
@@ -45,28 +46,96 @@ export const ImageContainer = ({containerTitle, images, backgroundColor}: ImageC
                 {containerTitle}
             </div>
 
+            {}
+
             <div style={{
                 // backgroundColor: "green",
                 marginTop: "3em",
                 marginBottom: "3em",
                 marginLeft: "2em",
                 marginRight: "2em",
-                height: "100%",
-                width: "100%",
                 display: "flex",
-                flexDirection: "row" // TODO tirar a row, apenas para testes
+                flexDirection: "column"
             }}>
-                <img style={{ // TODO colocar placeholder durante o loading da imagem e adicionar uma animação de fade quando ela terminar de carregar e aparecer
-                    width: imageSizeMap[images[1].aspectRatio],
-                    borderRadius: "15px",
-                }}src={images[0].url}/>
-                <img style={{ // TODO colocar placeholder durante o loading da imagem e adicionar uma animação de fade quando ela terminar de carregar e aparecer
-                    marginLeft: "2em",
-                    flexShrink: 0,
-                    width: imageSizeMap[images[0].aspectRatio],
-                    borderRadius: "15px",
-                }}src={images[1].url}/>
+                <div style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    marginBottom: "2em",
+                }}>
+                    <img style={{ // TODO colocar placeholder durante o loading da imagem e adicionar uma animação de fade quando ela terminar de carregar e aparecer
+                        height: imageSizeMap[images[1].aspectRatio],
+                        width: imageSizeMap[images[1].aspectRatio],
+                        borderRadius: "15px",
+                    }} src={"https://picsum.photos/1080/1920"}/>
+                    <img style={{ // TODO colocar placeholder durante o loading da imagem e adicionar uma animação de fade quando ela terminar de carregar e aparecer
+                        height: imageSizeMap[images[0].aspectRatio],
+                        width: imageSizeMap[images[0].aspectRatio],
+                        marginLeft: "2%",
+                        borderRadius: "15px",
+                    }} src={"https://picsum.photos/1920/1080"}/>
+                </div>
+                <div style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    marginBottom: "2em",
+                }}>
+                    <img style={{ // TODO colocar placeholder durante o loading da imagem e adicionar uma animação de fade quando ela terminar de carregar e aparecer
+                        height: imageSizeMap[images[1].aspectRatio],
+                        width: imageSizeMap[images[1].aspectRatio],
+                        borderRadius: "15px",
+                    }} src={"https://picsum.photos/1080/1920"}/>
+                    <img style={{ // TODO colocar placeholder durante o loading da imagem e adicionar uma animação de fade quando ela terminar de carregar e aparecer
+                        height: imageSizeMap[images[1].aspectRatio],
+                        width: imageSizeMap[images[1].aspectRatio],
+                        marginLeft: "2%",
+                        borderRadius: "15px",
+                    }} src={"https://picsum.photos/1080/1920"}/>
+                    <img style={{ // TODO colocar placeholder durante o loading da imagem e adicionar uma animação de fade quando ela terminar de carregar e aparecer
+                        height: imageSizeMap[images[1].aspectRatio],
+                        width: imageSizeMap[images[1].aspectRatio],
+                        marginLeft: "2%",
+                        borderRadius: "15px",
+                    }} src={"https://picsum.photos/1080/1920"}/>
+                    <img style={{ // TODO colocar placeholder durante o loading da imagem e adicionar uma animação de fade quando ela terminar de carregar e aparecer
+                        height: imageSizeMap[images[1].aspectRatio],
+                        width: imageSizeMap[images[1].aspectRatio],
+                        marginLeft: "2%",
+                        borderRadius: "15px",
+                    }} src={"https://picsum.photos/1080/1920"}/>
+                </div>
+                <div style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    marginBottom: "2em",
+                }}>
+                    <img style={{ // TODO colocar placeholder durante o loading da imagem e adicionar uma animação de fade quando ela terminar de carregar e aparecer
+                        height: imageSizeMap[images[0].aspectRatio],
+                        width: imageSizeMap[images[0].aspectRatio],
+                        borderRadius: "15px",
+                    }} src={"https://picsum.photos/1920/1080"}/>
+                    <img style={{ // TODO colocar placeholder durante o loading da imagem e adicionar uma animação de fade quando ela terminar de carregar e aparecer
+                        height: imageSizeMap[images[1].aspectRatio],
+                        width: imageSizeMap[images[1].aspectRatio],
+                        marginLeft: "2%",
+                        borderRadius: "15px",
+                    }} src={"https://picsum.photos/1080/1920"}/>
+
+
+                </div>
             </div>
         </div>
     )
 }
+
+
+// <img style={{ // TODO colocar placeholder durante o loading da imagem e adicionar uma animação de fade quando ela terminar de carregar e aparecer
+//     height: imageSizeMap[images[1].aspectRatio],
+//     width: imageSizeMap[images[1].aspectRatio],
+//     borderRadius: "15px",
+// }}src={images[0].url}/>
+// <img style={{ // TODO colocar placeholder durante o loading da imagem e adicionar uma animação de fade quando ela terminar de carregar e aparecer
+//     marginLeft: "2%",
+//     height: imageSizeMap[images[0].aspectRatio],
+//     width: imageSizeMap[images[0].aspectRatio],
+//     borderRadius: "15px",
+// }}src={images[1].url}/>
