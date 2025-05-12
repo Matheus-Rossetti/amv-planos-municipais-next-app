@@ -32,14 +32,20 @@ export const PdfContainer = ({containerTitle, pdfList, backgroundColor}: PdfCont
                 <div style={{
                     display: "flex",
                     alignItems: "center",
-                    justifyContent: "center"
+                    justifyContent: "center",
+                    marginTop: "3em",
+                    marginBottom: "3em",
                 }}>
-                <div style={{
-                    backgroundColor: "green",
-                    height: "50rem",
-                    width: "30rem",
-                }}>
-                </div>
+
+                    {...Array(5).map((_, index) => (
+                        <div
+                            key={index}
+                            style={{
+                            backgroundColor: "green",
+                            height: "10rem",
+                            width: "70%",
+                        }}>{index}</div>
+                    ))}
                 </div>
             </div>
 
