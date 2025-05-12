@@ -31,6 +31,21 @@
 [
   {
     "containerTitle": "",
-    "images": ["link1", "link2", "link3", "link4"]
+    "images": ["link1", "link2", "link3", "link4"] // TODO ajustar para que guarde multiplas imagens com aspectRatio, src, height e width
+  }
+]
+
+// PDF Container
+
+[
+  {
+    "containerTitle": "",
+    "pdfList": [
+      {
+        "src": "",
+        "name": "",
+        "previewSrc": "", // TODO essa preview vai ger gerada no momento do upload, pegar a primeira página e salvar como imagem no S3, o link vai aqui
+      }
+    ]
   }
 ]

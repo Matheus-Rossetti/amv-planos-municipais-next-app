@@ -1,8 +1,9 @@
+'use client'
+
 import React from "react";
 import {ImageContainerInterface} from "@/container-interfaces/image-container-interface";
 
 export const ImageContainer = ({containerTitle, images, backgroundColor}: ImageContainerInterface) => {
-
 
     // TODO refactor this to run when inserting the image url into the db, make a map {"url": "aspectRatio"}
     {/* ---------- LOGIC ---------- */
@@ -10,15 +11,17 @@ export const ImageContainer = ({containerTitle, images, backgroundColor}: ImageC
 
     // const imageAmount: number = images.length
 
-
     const imageSizeMap: Record<number, string> = {
         1.7: "74.3%",
         0.5: "23.5%",
         // TODO adicionar o 4:3
     }
 
-    // const layout
-
+    // images: [
+    //      {
+    //          src: ,
+    //      }
+    // ]
 
     return (
         <div style={{
@@ -46,16 +49,13 @@ export const ImageContainer = ({containerTitle, images, backgroundColor}: ImageC
                 {containerTitle}
             </div>
 
-            {}
-
-            <div style={{
+            <div
+                style={{
                 // backgroundColor: "green",
                 marginTop: "3em",
                 marginBottom: "3em",
                 marginLeft: "2em",
                 marginRight: "2em",
-                display: "flex",
-                flexDirection: "column"
             }}>
                 <div style={{
                     display: "flex",
@@ -119,10 +119,8 @@ export const ImageContainer = ({containerTitle, images, backgroundColor}: ImageC
                         marginLeft: "2%",
                         borderRadius: "15px",
                     }} src={"https://picsum.photos/1080/1920"}/>
-
-
-                </div>
             </div>
+        </div>
         </div>
     )
 }

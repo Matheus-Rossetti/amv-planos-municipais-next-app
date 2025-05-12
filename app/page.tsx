@@ -2,7 +2,8 @@ import React from "react";
 import { getCityColor } from "@/utils/get-city-color";
 import { TextContainer} from "@/components/containers/text-container";
 import { ListContainer } from "@/components/containers/list-container";
-import {ImageContainer} from "@/components/containers/image-container";
+import { ImageContainer } from "@/components/containers/image-container";
+import { PdfContainer } from "@/components/containers/pdf-container";
 
 export default async function AllContainersPage(){
 
@@ -28,7 +29,8 @@ export default async function AllContainersPage(){
             }}/>
             <TextContainer containerTitle={'Texto '} text={'hgeohweohoigewweijhgigewhogwenojgjwegopjg ewo gwe ioggwe '} backgroundColor={cityColor}></TextContainer>
             <ListContainer containerTitle={'Lista'} lists={[{"listTitle": "Primeira lista", "items": ["Item 1nnnnnnnnnn Item 1nnnnnnnnnnItem 1nnnnnnnnnnItem 1nnnnnnnnnnItem 1nnnnnnnnnnItem 1nnnnnnnnnnItem 1nnnnnnnnnnItem 1nnnnnnnnnnItem 1nnnnnnnnnnItem 1nnnnnnnnnnItem 1nnnnnnnnnnItem 1nnnnnnnnnnItem 1nnnnnnnnnnItem 1nnnnnnnnnnItem 1nnnnnnnnnnItem 1nnnnnnnnnnItem 1nnnnnnnnnnItem 1nnnnnnnnnnItem 1nnnnnnnnnnItem 1nnnnnnnnnnItem 1nnnnnnnnnnItem 1nnnnnnnnnnItem 1nnnnnnnnnnItem 1nnnnnnnnnnItem 1nnnnnnnnnn", "Item 2", "Item 3"]}, {"listTitle": "Segunda lista", "items": ["Item 1", "Item 2", "Item 3"]}]} backgroundColor={cityColor}/>
-            <ImageContainer containerTitle={'Imagem'} images={[{url: 'https://picsum.photos/1080/1920', aspectRatio: 1.7}, {url: 'https://picsum.photos/1920/1080', aspectRatio:0.5}]} backgroundColor={cityColor}/>
+            <ImageContainer containerTitle={'Imagem'} images={[{src: 'https://picsum.photos/1080/1920', width: 1920, height: 1080, aspectRatio: 1.7}, {src: 'https://picsum.photos/1920/1080', width: 1080, height: 1920, aspectRatio: 0.5}]} backgroundColor={cityColor}/>
+            <PdfContainer containerTitle={'Pdf'} pdfList={[{src: '', name: ''}, {src: '', name: ''}]} backgroundColor={cityColor} />
         </div>
 
 
