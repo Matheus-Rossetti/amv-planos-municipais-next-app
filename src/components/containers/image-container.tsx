@@ -51,7 +51,7 @@ export const ImageContainer = ({containerTitle, images, backgroundColor}: ImageC
 
             <div
                 style={{
-                    // backgroundColor: "green",
+                    backgroundColor: "green",
                     marginTop: "3em",
                     marginBottom: "3em",
                     marginLeft: "2em",
@@ -61,32 +61,36 @@ export const ImageContainer = ({containerTitle, images, backgroundColor}: ImageC
                     flexWrap: "wrap",
                 }}>
 
-                {images.map((image, index) => (
-                    <div key={index}>
-                        <img style={{ // TODO colocar placeholder durante o loading da imagem e adicionar uma animação de fade quando ela terminar de carregar e aparecer
-                            height: imageSizeMap[image.aspectRatio],
-                            width: imageSizeMap[image.aspectRatio],
-                            borderRadius: "15px",
-                            marginBottom: "2em",
-                            marginLeft: "2%",
-                        }} src={image.src}/>
+                <img style={{ // TODO colocar placeholder durante o loading da imagem e adicionar uma animação de fade quando ela terminar de carregar e aparecer
+                    height: imageSizeMap[images[1].aspectRatio],
+                    width: imageSizeMap[images[1].aspectRatio],
+                    borderRadius: "15px",
+                }}src={images[0].src}/>
+                <img style={{ // TODO colocar placeholder durante o loading da imagem e adicionar uma animação de fade quando ela terminar de carregar e aparecer
+                    marginLeft: "2%",
+                    height: imageSizeMap[images[0].aspectRatio],
+                    width: imageSizeMap[images[0].aspectRatio],
+                    borderRadius: "15px",
+                }}src={images[1].src}/>
 
-                    </div>
-                ))}
             </div>
         </div>
     )
 }
 
 
-// <img style={{ // TODO colocar placeholder durante o loading da imagem e adicionar uma animação de fade quando ela terminar de carregar e aparecer
-//     height: imageSizeMap[images[1].aspectRatio],
-//     width: imageSizeMap[images[1].aspectRatio],
-//     borderRadius: "15px",
-// }}src={images[0].url}/>
-// <img style={{ // TODO colocar placeholder durante o loading da imagem e adicionar uma animação de fade quando ela terminar de carregar e aparecer
-//     marginLeft: "2%",
-//     height: imageSizeMap[images[0].aspectRatio],
-//     width: imageSizeMap[images[0].aspectRatio],
-//     borderRadius: "15px",
-// }}src={images[1].url}/>
+
+
+
+
+
+// {images.map((image, index) => (
+//     <div key={index}>
+//
+//         <img style={{ // TODO colocar placeholder durante o loading da imagem e adicionar uma animação de fade quando ela terminar de carregar e aparecer
+//             height: imageSizeMap[image.aspectRatio],
+//             width: imageSizeMap[image.aspectRatio],
+//             borderRadius: "15px",
+//         }} src={image.src}/>
+//     </div>
+// ))}
