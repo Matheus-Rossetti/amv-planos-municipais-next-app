@@ -67,7 +67,7 @@ export const ImageContainer = ({containerTitle, images, backgroundColor}: ImageC
                          style={{ // TODO colocar placeholder durante o loading da imagem e adicionar uma animação de fade quando ela terminar de carregar e aparecer
                         height: imageSizeMap[image.aspectRatio],
                         width: imageSizeMap[image.aspectRatio],
-                        borderRadius: "15px",
+                        borderRadius: "15px", // TODO alterar para se adaptar ao width da tela, talvez usar 'calc(15px * 0.2vw)' ou coisa assim
                              marginBottom: `1.5vw`,
                     }}src={image.src}/>
                 ))}

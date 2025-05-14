@@ -41,7 +41,6 @@ export default async function AllContainersPage(){
                 {src: 'https://picsum.photos/1080/1920', height: 1080, width: 1920, aspectRatio: 0.5},
                 {src: 'https://picsum.photos/1920/1080', height: 1920, width: 1080, aspectRatio: 1.7},
                 {src: 'https://picsum.photos/1080/1920', height: 1080, width: 1920, aspectRatio: 0.5},
-
             ]} backgroundColor={cityColor}/>
             <PdfContainer containerTitle={'Painel de Pdf'} pdfList={[{src: '', name: ''}, {src: '', name: ''}]} backgroundColor={cityColor} />
         </div>
