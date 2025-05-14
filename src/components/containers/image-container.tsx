@@ -51,28 +51,26 @@ export const ImageContainer = ({containerTitle, images, backgroundColor}: ImageC
 
             <div
                 style={{
-                    backgroundColor: "green",
+                    // backgroundColor: "green", // Debug only
                     marginTop: "3em",
-                    marginBottom: "3em",
+                    marginBottom: 'calc(3em - 1.5vw)', // Each image has 1.2vw marginBottom, so we subtract to keep a coherent design
                     marginLeft: "2em",
                     marginRight: "2em",
                     display: "flex",
                     flexDirection: "row",
                     flexWrap: "wrap",
+                    justifyContent: "space-between",
+                    // gap: "1.893em", // Changing this number breaks the design, I'm not kidding
                 }}>
-
-                <img style={{ // TODO colocar placeholder durante o loading da imagem e adicionar uma animação de fade quando ela terminar de carregar e aparecer
-                    height: imageSizeMap[images[1].aspectRatio],
-                    width: imageSizeMap[images[1].aspectRatio],
-                    borderRadius: "15px",
-                }}src={images[0].src}/>
-                <img style={{ // TODO colocar placeholder durante o loading da imagem e adicionar uma animação de fade quando ela terminar de carregar e aparecer
-                    marginLeft: "2%",
-                    height: imageSizeMap[images[0].aspectRatio],
-                    width: imageSizeMap[images[0].aspectRatio],
-                    borderRadius: "15px",
-                }}src={images[1].src}/>
-
+                {images.map((image, index) => (
+                    <img key={index}
+                         style={{ // TODO colocar placeholder durante o loading da imagem e adicionar uma animação de fade quando ela terminar de carregar e aparecer
+                        height: imageSizeMap[image.aspectRatio],
+                        width: imageSizeMap[image.aspectRatio],
+                        borderRadius: "15px",
+                             marginBottom: `1.5vw`,
+                    }}src={image.src}/>
+                ))}
             </div>
         </div>
     )
@@ -87,7 +85,6 @@ export const ImageContainer = ({containerTitle, images, backgroundColor}: ImageC
 // {images.map((image, index) => (
 //     <div key={index}>
 //
-//         <img style={{ // TODO colocar placeholder durante o loading da imagem e adicionar uma animação de fade quando ela terminar de carregar e aparecer
 //             height: imageSizeMap[image.aspectRatio],
 //             width: imageSizeMap[image.aspectRatio],
 //             borderRadius: "15px",
