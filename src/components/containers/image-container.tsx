@@ -17,11 +17,8 @@ export const ImageContainer = ({containerTitle, images, backgroundColor}: ImageC
         // TODO adicionar o 4:3
     }
 
-    // images: [
-    //      {
-    //          src: ,
-    //      }
-    // ]
+    // TODO reorganizar a ordem do array de imagens para evitar espaço em branco, uma row pode conter 4 0.5 seguidos,
+    //  mas se tiver 3 ou 2 0.5 e um 1.7, o 1.7 será jogado para baixo e ficará um espaço em branco.
 
     return (
         <div style={{

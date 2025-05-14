@@ -27,16 +27,27 @@
 ]
 
 // Image Container
-
 [
   {
     "containerTitle": "",
-    "images": ["link1", "link2", "link3", "link4"] // TODO ajustar para que guarde multiplas imagens com aspectRatio, src, height e width
+    "images": [
+      {
+        "src": "link1",
+        "height": 0,
+        "width": 0,
+        "aspectRatio": 0, // 0.5, 1.7 ou {TODO inserir o AR do 4:3}
+      },
+      {
+        "src": "link2",
+        "height": 0,
+        "width": 0,
+        "aspectRatio": 0, // 0.5, 1.7 ou {TODO inserir o AR do 4:3}
+      }
+    ]
   }
 ]
 
 // PDF Container
-
 [
   {
     "containerTitle": "",
@@ -44,7 +55,7 @@
       {
         "src": "",
         "name": "",
-        "previewSrc": "", // TODO essa preview vai ger gerada no momento do upload, pegar a primeira página e salvar como imagem no S3, o link vai aqui
+        "previewSrc": "" // TODO essa preview vai ger gerada no momento do upload, pegar a primeira página e salvar como imagem no S3, o link vai aqui
       }
     ]
   }
