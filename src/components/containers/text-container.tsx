@@ -1,7 +1,7 @@
 import React from 'react';
-import {TextContainerInterface} from "@/container-interfaces/text-container-interface";
+import {TextInterface} from "@/container-interfaces/text-interface";
 
-export const TextContainer = ({containerTitle, text, backgroundColor}: TextContainerInterface) => {
+export const TextContainer = ({containerTitle, text, backgroundColor}: TextInterface) => {
     return (
         <div style={{
             backgroundColor: "white",

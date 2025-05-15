@@ -6,7 +6,7 @@ interface Pdf{
     name: string,
 }
 
-export interface PdfContainerInterface {
+export interface PdfInterface {
     containerTitle: string,
     pdfList: Pdf[],
     backgroundColor: BackgroundColor,

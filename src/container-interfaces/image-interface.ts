@@ -1,14 +1,14 @@
 import {Property} from "csstype";
 import BackgroundColor = Property.BackgroundColor;
 
-interface Image { // Do not confuse with Image class, use only inside this scope.
+export interface Image { // Do not confuse with Image class, use only inside this scope.
     src: string,
     width: number,
     height: number,
-    aspectRatio: number,
+    aspectRatio: string,
 }
 
-export interface ImageContainerInterface {
+export interface ImageInterface {
     containerTitle: string,
     images: Image[],
     backgroundColor: BackgroundColor,

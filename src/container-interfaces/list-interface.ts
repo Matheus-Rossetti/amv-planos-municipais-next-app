@@ -7,7 +7,7 @@ interface List {
 }
 
 
-export interface ListContainerInterface {
+export interface ListInterface {
     containerTitle: string,
     lists: List[],
     backgroundColor: BackgroundColor,

@@ -35,13 +35,13 @@
         "src": "link1",
         "height": 0,
         "width": 0,
-        "aspectRatio": 0, // 0.5, 1.7 ou {TODO inserir o AR do 4:3}
+        "aspectRatio": "16/9",
       },
       {
         "src": "link2",
         "height": 0,
         "width": 0,
-        "aspectRatio": 0, // 0.5, 1.7 ou {TODO inserir o AR do 4:3}
+        "aspectRatio": "9/16", // TODO esse valor vem da função que calcula se hight é meio que width, tem um TODO no image-container
       }
     ]
   }
