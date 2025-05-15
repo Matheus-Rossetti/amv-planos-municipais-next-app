@@ -5,12 +5,6 @@ import {ImageInterface} from "@/container-interfaces/image-interface";
 
 export const ImageContainer = ({containerTitle, images, backgroundColor}: ImageInterface) => {
 
-    // TODO refactor this to run when inserting the image url into the db, make a map {"url": "aspectRatio"}
-    {/* ---------- LOGIC ---------- */
-    }
-
-    // const imageAmount: number = images.length
-
     const imageSizeMap: Record<string, string> = {
         "16/9": "74.3%", // 16:9
         "9/16": "23.5%", // 9:16
@@ -52,7 +46,8 @@ export const ImageContainer = ({containerTitle, images, backgroundColor}: ImageI
                     display: "flex",
                     flexDirection: "row",
                     flexWrap: "wrap",
-                    justifyContent: "space-between",
+                    justifyContent: "center",
+                    gap: "1.2vw",
                 }}>
                 {images.map((image, index) => {
                     // const aspectRatio: string = image.width > image.height ? "horizontal" : "vertical" // TODO colocar na função de guardar a imagem no json
@@ -63,7 +58,6 @@ export const ImageContainer = ({containerTitle, images, backgroundColor}: ImageI
                                  width: imageSizeMap[image.aspectRatio],
                                  backgroundColor: (backgroundColor.toString() + "B3"), // "B3" = 70% opacity
                                  borderRadius: "15px",
-                                 marginBottom: "1.5vw",
                                  display: "flex",
                                  justifyContent: "center",
                              }}>
@@ -81,14 +75,3 @@ export const ImageContainer = ({containerTitle, images, backgroundColor}: ImageI
         </div>
     )
 }
-
-
-// {images.map((image, index) => (
-//     <div key={index}>
-//
-//             height: imageSizeMap[image.aspectRatio],
-//             width: imageSizeMap[image.aspectRatio],
-//             borderRadius: "15px",
-//         }} src={image.src}/>
-//     </div>
-// ))}

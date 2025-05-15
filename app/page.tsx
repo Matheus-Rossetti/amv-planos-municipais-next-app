@@ -9,7 +9,7 @@ import BackgroundColor = Property.BackgroundColor;
 
 export default async function AllContainersPage(){
 
-    const cityColor: BackgroundColor = getCityColor('São João do Itaperiú')
+    const cityColor: BackgroundColor = getCityColor('Jaraguá do Sul')
 
     return (
         <div style={{
@@ -32,9 +32,13 @@ export default async function AllContainersPage(){
                 {src: 'https://picsum.photos/1080/1920', width: 1080, height: 1920, aspectRatio: "9/16"},
                 {src: 'https://picsum.photos/1920/1080', width: 1920, height: 1080, aspectRatio: "16/9"}, // TODO height & width estão ao contrario
                 {src: 'https://picsum.photos/1080/1440', width: 1080, height: 1440, aspectRatio: "9/16"},
+                {src: 'https://picsum.photos/1080/1440', width: 1080, height: 1440, aspectRatio: "9/16"},
                 {src: 'https://picsum.photos/1080/1920', width: 1080, height: 1920, aspectRatio: "9/16"},
                 {src: 'https://picsum.photos/1080/1440', width: 1080, height: 1440, aspectRatio: "9/16"},
+                {src: 'https://picsum.photos/1080/1440', width: 1080, height: 1440, aspectRatio: "9/16"},
                 {src: 'https://picsum.photos/1920/1080', width: 1920, height: 1080, aspectRatio: "16/9"},
+                {src: 'https://picsum.photos/1440/1080', width: 1920, height: 1080, aspectRatio: "16/9"},
+                {src: 'https://picsum.photos/1080/1440', width: 1080, height: 1440, aspectRatio: "9/16"},
 
             ]} backgroundColor={cityColor}/>
             <PdfContainer containerTitle={'Painel de Pdf'} pdfList={[{src: '', name: ''}, {src: '', name: ''}]} backgroundColor={cityColor} />
