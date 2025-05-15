@@ -54,7 +54,7 @@ export const ImageContainer = ({containerTitle, images, backgroundColor}: ImageI
                     return (
                         <div key={index}
                              style={{
-                                 aspectRatio: image.aspectRatio,
+                                 aspectRatio: image.aspectRatio, // TODO tirar esse container, a imagem preencherá o AR, mesmo que corte um pedaço o usuário pode clicar na imagem para vê-la por completo
                                  width: imageSizeMap[image.aspectRatio],
                                  backgroundColor: (backgroundColor.toString() + "B3"), // "B3" = 70% opacity
                                  borderRadius: "15px",
@@ -65,7 +65,7 @@ export const ImageContainer = ({containerTitle, images, backgroundColor}: ImageI
                                 style={{
                                     borderRadius: "15px",
                                     width: "100%",
-                                    objectFit: "contain",
+                                    objectFit: "cover",
                                     display: "block",
                                 }} src={image.src}/>
                         </div>
