@@ -2,7 +2,6 @@
 
 import React from "react";
 import {ImageInterface} from "@/container-interfaces/image-interface";
-import {organizeImages} from "@/utils/organize-images";
 
 export const ImageContainer = ({containerTitle, images, backgroundColor}: ImageInterface) => {
 
@@ -16,8 +15,6 @@ export const ImageContainer = ({containerTitle, images, backgroundColor}: ImageI
         "16/9": "74.3%", // 16:9
         "9/16": "23.5%", // 9:16
     }
-
-    images = organizeImages(images) // Very important!!! Otherwise, layout will go brrrr
 
     return (
         <div style={{
@@ -47,7 +44,7 @@ export const ImageContainer = ({containerTitle, images, backgroundColor}: ImageI
 
             <div
                 style={{
-                    // backgroundColor: "green", // Debug only
+                    // backgroundColor: (backgroundColor.toString() + "B3"), // Debug only
                     marginTop: "3em",
                     marginBottom: 'calc(3em - 1.5vw)', // Each image has 1.5vw marginBottom, so we subtract to keep a coherent design
                     marginLeft: "2em",
