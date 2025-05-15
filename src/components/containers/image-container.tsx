@@ -66,7 +66,7 @@ export const ImageContainer = ({containerTitle, images, backgroundColor}: ImageI
                                     borderRadius: "15px",
                                     width: "100%",
                                     objectFit: "cover",
-                                    display: "block",
+                                    display: "block", // TODO adicionar 'click -> abre o src em outra aba'.
                                 }} src={image.src}/>
                         </div>
                     )
