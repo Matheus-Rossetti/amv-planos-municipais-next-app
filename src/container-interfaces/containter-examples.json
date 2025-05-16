@@ -41,11 +41,29 @@
         "src": "link2",
         "height": 0,
         "width": 0,
-        "aspectRatio": "9/16", // TODO esse valor vem da função que calcula se hight é meio que width, tem um TODO no image-container
+        "aspectRatio": "9/16", // TODO esse valor vem da função que calcula se hight é maior que width, tem um TODO no image-container
       }
     ]
   }
 ]
+
+// Table Container
+[
+  {
+    "containerTitle": "",
+    "columns": ["", "", ""],
+    "rows": [
+      {
+        "rowItems": ["", "", ""]
+      },
+      {
+        "rowItems": ["", "", ""]
+      }
+    ]
+  }
+]
+
+
 
 // PDF Container
 [
