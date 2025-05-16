@@ -30,32 +30,37 @@ export const TableContainer = ({containerTitle, columns, backgroundColor}: Table
                     {containerTitle}
                 </div>
 
-                <div style={{
-                    backgroundColor: backgroundColor,
 
-                    width: "fit-content",
+                <div style={{
                     display: "flex",
-                    justifyContent: "center",
-                    marginTop: "3em",
-                    marginBottom: "3em",
-                    marginLeft: "2em",
-                    marginRight: "2em"
+                    justifyContent: "center"
                 }}>
                     <div style={{
                         display: "flex",
                         flexDirection: "row",
+                        width: "fit-content",
+                        // backgroundColor: "aquamarine",
+                        borderRadius: "15px",
+                        border: "1px solid black",
                         gap: "1em",
+                        marginTop: "3em",
+                        marginBottom: "3em",
+                        marginLeft: "2em",
+                        marginRight: "2em",
+                        paddingBottom: 7,
+                        paddingTop: 7,
+                        paddingLeft: 20,
+                        paddingRight: 20,
                     }}>
                         {columns.map((column, index) => (
                             <div key={index} style={{
                                 display: "flex",
                                 flexDirection: "column",
+                                borderRight: "1px solid black"
                             }}>
                                 <div>{column.columnName}</div>
                                 {column.items.map((item, index) => (
-                                    <div key={index}>
-                                        item
-                                    </div>
+                                    <div key={index}>{item}</div>
                                 ))}
                             </div>
                         ))}
