@@ -51,15 +51,16 @@
 [
   {
     "containerTitle": "",
-    "columns": ["", "", ""],
-    "rows": [
+    "columns": [
       {
-        "rowItems": ["", "", ""]
+        "columnName": "",
+        "items": ["", "", ""]
       },
       {
-        "rowItems": ["", "", ""]
+        "columnName": "",
+        "items": ["", "", ""]
       }
-    ]
+    ],
   }
 ]
 

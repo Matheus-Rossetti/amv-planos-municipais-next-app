@@ -1,7 +1,7 @@
 import React from "react";
 import {TableInterface} from "@/container-interfaces/table-interface";
 
-export const TableContainer = ({containerTitle, columns, rows, backgroundColor}: TableInterface) => {
+export const TableContainer = ({containerTitle, columns, backgroundColor}: TableInterface) => {
 
     return (
 
@@ -31,43 +31,28 @@ export const TableContainer = ({containerTitle, columns, rows, backgroundColor}:
                 </div>
 
                 <div style={{
+                    backgroundColor: backgroundColor,
+
+                    width: "fit-content",
                     display: "flex",
-                    flexDirection: "column", // occupies full width, don't know why
                     justifyContent: "center",
                     marginTop: "3em",
                     marginBottom: "3em",
                     marginLeft: "2em",
                     marginRight: "2em"
                 }}>
-                    {/* --- COLUMNS --- */}
                     <div style={{
-                        height: "100%",
-                        backgroundColor: backgroundColor,
-                        padding: "1em",
                         display: "flex",
                         flexDirection: "row",
-                        gap: "1em"
+                        gap: "1em",
                     }}>
                         {columns.map((column, index) => (
-                            <div key={index} style={{
-
-                            }}>
-                                {column}
+                            <div key={index}>
+                                {column.columnName}
                             </div>
                         ))}
                     </div>
-                {/* --- ROWS --- */}
-                    <div>
-                        {rows.map((row, index) => (
-                            <div key={index} style={{
-                                display: "flex",
-                                flexDirection: "row",
-                            }}>
-                                {row.rowItems}
 
-                            </div>
-                        ))}
-                    </div>
                 </div>
         </div>
     )

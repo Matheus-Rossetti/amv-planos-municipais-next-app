@@ -1,14 +1,14 @@
 import {Property} from "csstype";
 import BackgroundColor = Property.BackgroundColor;
 
-interface Row {
-    rowItems: string[]
+interface Column {
+    columnName: string,
+    items: string[],
 }
 
 export interface TableInterface {
     containerTitle: string,
-    columns: string[],
-    rows: Row[],
+    columns: Column[],
 
     backgroundColor: BackgroundColor,
 }
