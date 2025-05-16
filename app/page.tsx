@@ -33,7 +33,7 @@ export default async function AllContainersPage(){
                 {src: 'https://picsum.photos/1080/1440', width: 1080, height: 1440, aspectRatio: "9/16"},
                 {src: 'https://picsum.photos/1080/1920', width: 1080, height: 1920, aspectRatio: "9/16"},
             ]} backgroundColor={cityColor}/>
-            <TableContainer containerName={} columns={} rows={} backgroundColor={}/>
+            <TableContainer containerTitle={"Painel de Tabela"} columns={["Coluna 1", "Coluna 2", "Coluna 3"]} rows={[{rowItems: ["Item 1", "Item 2", "Item 3"]}, {rowItems: ["Item 1", "Item 2", "Item 3"]}]} backgroundColor={cityColor}/>
             <PdfContainer containerTitle={'Painel de Pdf'} pdfList={[{src: '', name: ''}, {src: '', name: ''}]} backgroundColor={cityColor} />
         </div>
     )

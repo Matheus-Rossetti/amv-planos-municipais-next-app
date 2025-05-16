@@ -6,7 +6,7 @@ interface Row {
 }
 
 export interface TableInterface {
-    containerName: string,
+    containerTitle: string,
     columns: string[],
     rows: Row[],
 
