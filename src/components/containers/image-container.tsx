@@ -1,6 +1,6 @@
 'use client'
 
-import React from "react";
+import React, {useState} from "react";
 import {ImageInterface} from "@/container-interfaces/image-interface";
 
 export const ImageContainer = ({containerTitle, images, backgroundColor}: ImageInterface) => {
@@ -9,6 +9,8 @@ export const ImageContainer = ({containerTitle, images, backgroundColor}: ImageI
         "16/9": "74.3%", // 16:9
         "9/16": "23.5%", // 9:16
     }
+
+    const [hoverIndex, setHoverIndex] = useState<number | null>(null); // image hover effect
 
     return (
         <div style={{
@@ -52,23 +54,28 @@ export const ImageContainer = ({containerTitle, images, backgroundColor}: ImageI
                 {images.map((image, index) => {
                     // const aspectRatio: string = image.width > image.height ? "horizontal" : "vertical" // TODO colocar na função de guardar a imagem no json
                     return (
-                        <div key={index}
-                             style={{
-                                 aspectRatio: image.aspectRatio, // TODO tirar esse container, a imagem preencherá o AR, mesmo que corte um pedaço o usuário pode clicar na imagem para vê-la por completo
-                                 width: imageSizeMap[image.aspectRatio],
-                                 backgroundColor: (backgroundColor.toString() + "B3"), // "B3" = 70% opacity
-                                 borderRadius: "15px",
-                                 display: "flex",
-                                 justifyContent: "center",
-                             }}>
-                            <img
-                                style={{
+                        <a key={index} href={image.src} target={"_blank"} rel={"noopener noreferrer"}
+                           onMouseEnter={() => setHoverIndex(index)}
+                           onMouseLeave={() => setHoverIndex(null)}
+                           style={{
+                               // --- HOVER ---
+                               transition: "transform 0.2s ease-in-out",
+                               transform: hoverIndex === index ? (image.aspectRatio === "16/9" ? "scale(1.03)" : "scale(1.05)") : "scale(1)", // Different scale size depending on aspect ratio
+                               // --- HOVER ---
+                               aspectRatio: image.aspectRatio,
+                               width: imageSizeMap[image.aspectRatio],
+                               backgroundColor: (backgroundColor.toString() + "B3"), // "B3" = 70% opacity
+                               borderRadius: "15px",
+                               display: "flex",
+                               justifyContent: "center",
+                           }}>
+                            <img style={{
                                     borderRadius: "15px",
                                     width: "100%",
                                     objectFit: "cover",
-                                    display: "block", // TODO adicionar 'click -> abre o src em outra aba'.
+                                    display: "block",
                                 }} src={image.src}/>
-                        </div>
+                        </a>
                     )
                 })}
             </div>
