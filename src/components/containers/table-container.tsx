@@ -42,25 +42,30 @@ export const TableContainer = ({containerTitle, columns, backgroundColor}: Table
                         // backgroundColor: "aquamarine",
                         borderRadius: "15px",
                         border: "1px solid black",
-                        gap: "1em",
+                        // gap: "1em",
                         marginTop: "3em",
                         marginBottom: "3em",
                         marginLeft: "2em",
                         marginRight: "2em",
-                        paddingBottom: 7,
-                        paddingTop: 7,
-                        paddingLeft: 20,
-                        paddingRight: 20,
+                        // paddingBottom: 7,
+                        // paddingTop: 7,
+                        // paddingLeft: 20,
+                        // paddingRight: 20,
                     }}>
                         {columns.map((column, index) => (
                             <div key={index} style={{
                                 display: "flex",
-                                flexDirection: "column",
-                                borderRight: "1px solid black"
+                                flexDirection: "column",   // TODO tem que colocar os textos em divs separadas, tem que ter uma div pra ser a "caixa" com um estilo, pra fazer as bordas e outra dentro com o texto, se não ficam espaços entre as bordas
+                                borderRight: index === (columns.length - 1) ? "0px solid black" : "1px solid black",
+                                // paddingRight: index === (columns.length - 1) ? "0" : "10px",
                             }}>
-                                <div>{column.columnName}</div>
+                                <div style={{
+                                    borderBottom: "1px solid black",
+                                }}>{column.columnName}</div>
                                 {column.items.map((item, index) => (
-                                    <div key={index}>{item}</div>
+                                    <div key={index} style={{
+                                        borderBottom: "1px solid black",
+                                    }}>{item}</div>
                                 ))}
                             </div>
                         ))}
