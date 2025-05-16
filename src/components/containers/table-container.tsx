@@ -47,8 +47,16 @@ export const TableContainer = ({containerTitle, columns, backgroundColor}: Table
                         gap: "1em",
                     }}>
                         {columns.map((column, index) => (
-                            <div key={index}>
-                                {column.columnName}
+                            <div key={index} style={{
+                                display: "flex",
+                                flexDirection: "column",
+                            }}>
+                                <div>{column.columnName}</div>
+                                {column.items.map((item, index) => (
+                                    <div key={index}>
+                                        item
+                                    </div>
+                                ))}
                             </div>
                         ))}
                     </div>
