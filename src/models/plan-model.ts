@@ -1,7 +1,7 @@
 export class Plan {
     constructor(
         public id: number,
-        public creationAt: string,
+        public createdAt: string,
         public createdBy: number,
         public name: string,
         public description: string,
@@ -24,6 +24,7 @@ export class Plan {
 // Plan fields are only fix information and tab, information inside the tabs are modular
 
 // startingTab {
+//      tabName: "",
 //      containers: [
 //          {
 //              containerType: "text",

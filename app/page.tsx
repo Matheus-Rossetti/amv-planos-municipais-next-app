@@ -10,7 +10,7 @@ import {TableContainer} from "@/components/containers/table-container";
 
 export default async function AllContainersPage(){
 
-    const cityColor: BackgroundColor = getCityColor('Jaraguá do Sul')
+    const cityColor: BackgroundColor = getCityColor('São João do Itaperiú')
 
     return (
         <div style={{

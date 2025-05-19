@@ -1,0 +1,118 @@
+{
+  "id": 1,
+  "createdAt": "19/05/2025",
+  "createdBy": 1,
+  "name": "Plano Teste",
+  "description": "Este plano é apenas um teste!",
+  "city": "São João do Itaperiú",
+  "startDate": 2025,
+  "endDate": 2026,
+  "archived": false,
+  "version": 1,
+  "parentId": null,
+  "lastModified": "19/05/2025",
+  "startingTab": [
+    {
+      "tabName": "Início",
+      "containers": [
+        {
+          "containerType": "text",
+          "containerTitle": "Descrição",
+          "text": "Essa é uma descrição um pouco mais detalhada do plano de teste!"
+        },
+        {
+          "containerType": "text",
+          "containerTitle": "Objetivos",
+          "text": "O objetivo do plano teste é ser um teste!"
+        },
+        {
+          "containerType": "text",
+          "containerTitle": "Base legal",
+          "text": "Lei número 1\nLei número 2\nLei número 3\nLei número 4"
+        }
+      ]
+    }
+    ],
+  "preparationsTab": [
+    {
+      "tabName": "Elaboração do plano",
+      "containers": [
+        {
+          "containerType": "text",
+          "containerName": "Motivação",
+          "containerContent": "Esse plano foi elaborado para servir como teste no site de planos da Amvali"
+        },
+        {
+          "containerType": "image",
+          "containerName": "Imagens meramente ilustrativas",
+          "images": [
+            {"src": "https://picsum.photos/1080/1440", "width": 1080, "height": 1440, "aspectRatio": "9/16"},
+            {"src": "https://picsum.photos/1080/1920", "width": 1080, "height": 1920, "aspectRatio": "9/16"}
+          ]
+        }
+      ]
+    }
+  ],
+  "lawTab": [
+    {
+      "tabName": "Base Legal",
+      "containers": [
+        {
+          "containerType": "text",
+          "containerTitle": "Leis",
+          "text": "Primeira lei: http://google.com\nSegunda lei: http://google.com\nTerceira lei: http://google.com\n"
+        }
+      ]
+    }
+  ],
+  "libraryTab": [
+    {
+      "containers": [
+        {
+          "containerType": "text",
+          "containerTitle": "Biblioteca",
+          "text": "Primeiro item: http://google.com\nSegundo item: http://google.com\nTerceiro item: http://google.com\n"
+        }
+      ]
+    }
+  ],
+  "extraTabs": [
+    {
+      "tabName": "Guia 1",
+      "containers": [
+        {
+          "containerType": "image",
+          "containerTitle": "Imagens representativas",
+          "images": [
+            {"src": "https://picsum.photos/1080/1440", "width": 1080, "height": 1440, "aspectRatio": "9/16"},
+            {"src": "https://picsum.photos/1920/1080", "width": 1080, "height": 1920, "aspectRatio": "9/16"},
+            {"src": "https://picsum.photos/1920/1080", "width": 1080, "height": 1920, "aspectRatio": "9/16"},
+            {"src": "https://picsum.photos/1080/1920", "width": 1080, "height": 1920, "aspectRatio": "9/16"}
+          ]
+        },
+        {
+          "containerType": "list",
+          "containerTitle": "Lista Representativa",
+          "lists": [
+            {
+              "listTitle": "Primeira lista",
+              "items": ["Primeiro item", "Segundo Item", "Terceiro Item"]
+            },
+            {
+              "listTitle": "Segunda lista",
+              "items": ["Primeiro item", "Segundo Item", "Terceiro Item"]
+            },
+            {
+              "listTitle": "Terceira lista",
+              "items": ["Primeiro item", "Segundo Item", "Terceiro Item"]
+            },
+            {
+              "listTitle": "Quarta lista",
+              "items": ["Primeiro item", "Segundo Item", "Terceiro Item"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
