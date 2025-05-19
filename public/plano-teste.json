@@ -11,7 +11,7 @@
   "version": 1,
   "parentId": null,
   "lastModified": "19/05/2025",
-  "startingTab": [
+  "startingTab":
     {
       "tabName": "Início",
       "containers": [
@@ -32,8 +32,8 @@
         }
       ]
     }
-    ],
-  "preparationsTab": [
+    ,
+  "preparationsTab":
     {
       "tabName": "Elaboração do plano",
       "containers": [
@@ -52,8 +52,8 @@
         }
       ]
     }
-  ],
-  "lawTab": [
+  ,
+  "lawTab":
     {
       "tabName": "Base Legal",
       "containers": [
@@ -64,9 +64,10 @@
         }
       ]
     }
-  ],
-  "libraryTab": [
+  ,
+  "libraryTab":
     {
+      "tabName": "Biblioteca",
       "containers": [
         {
           "containerType": "text",
@@ -75,7 +76,7 @@
         }
       ]
     }
-  ],
+  ,
   "extraTabs": [
     {
       "tabName": "Guia 1",
