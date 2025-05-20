@@ -6,7 +6,7 @@ export const TopBar = ({planName, color}:{planName: string, color: BackgroundCol
     return (
         <div style={{
             backgroundColor: color,
-            width: "100vw",
+            width: "100%",
             flexDirection: "column",
             height: "17vh",
             display: "flex",
