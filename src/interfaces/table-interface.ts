@@ -1,14 +1,16 @@
 import {Property} from "csstype";
 import BackgroundColor = Property.BackgroundColor;
 
-interface List {
-    listTitle: string,
+interface Column {
+    columnName: string,
     items: string[],
 }
 
-
-export interface ListInterface {
+export interface TableInterface {
     containerTitle: string,
-    lists: List[],
+    columns: Column[],
+
     backgroundColor: BackgroundColor,
 }
+
+// TODO refatorar, não vai funcionar assim.

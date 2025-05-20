@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 // TODO alterar para fetchar o plano do db (ou do cache, se tiver)
 import plan from "../public/plano-teste.json";
 import {getCityColor} from "@/utils/get-city-color";
@@ -9,14 +9,14 @@ import {PdfContainer} from "@/components/containers/pdf-container";
 import {Property} from "csstype";
 import BackgroundColor = Property.BackgroundColor;
 import {TableContainer} from "@/components/containers/table-container";
-import {TopBar} from "./plano/topbar";
-import {Tab} from "./plano/tab";
+import {TopBar} from "@/components/topbar";
+import {Tab} from "@/components/tab";
 
 export default async function AllContainersPage() {
 
 
     const cityColor: BackgroundColor = getCityColor(plan.city)
-    let [ tabIndex, changeTabIndex ] = useState<number>(0)
+    // let [ tabIndex, changeTabIndex ] = useState<number>(0)
 
     return (
         <div style={{

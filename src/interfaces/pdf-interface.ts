@@ -11,3 +11,6 @@ export interface PdfInterface {
     pdfList: Pdf[],
     backgroundColor: BackgroundColor,
 }
+
+// TODO deve conter uma imagem da primeira página do PDF
+//  para mostrar como preview, antes de abrir o PDF completo

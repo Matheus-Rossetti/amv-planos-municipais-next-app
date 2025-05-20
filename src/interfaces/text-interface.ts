@@ -6,3 +6,11 @@ export interface TextInterface {
     text: string,
     backgroundColor: BackgroundColor,
 }
+
+
+// --- JSON ---
+// {
+//     "containerType": "text",
+//     "containerTitle": "Descrição",
+//     "text": "Essa é a descrição do plano!"
+// }
