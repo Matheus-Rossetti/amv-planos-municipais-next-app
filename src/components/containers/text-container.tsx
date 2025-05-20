@@ -14,7 +14,7 @@ export const TextContainer = ({containerTitle, text, backgroundColor}: TextInter
         }}>
 
             {/* ---------- TITLE ---------- */}
-            <div style={{ // TODO colocar margem na direita também pra quando o titulo for grande o suficiente para chegar ao final do container
+            <div style={{
                 fontSize: "xx-large",
                 backgroundColor: backgroundColor,
                 color: "white",

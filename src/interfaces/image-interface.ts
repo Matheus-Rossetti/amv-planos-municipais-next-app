@@ -5,7 +5,9 @@ interface Image { // Do not confuse with Image class, use only inside this scope
     src: string,
     width: number,
     height: number,
-    aspectRatio: string,
+    aspectRatio: string, // TODO O aspectRatio aqui não é exatamente o da imagem, ele deve ser
+                         //     ou "16/9" ou "9/16", para decidir qual é a proporção a se colocar
+                        //      pode se verificar height > width ? "9/16" : "16/9"
 }
 
 export interface ImageInterface {

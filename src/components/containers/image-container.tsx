@@ -52,7 +52,6 @@ export const ImageContainer = ({containerTitle, images, backgroundColor}: ImageI
                     gap: "1.2vw",
                 }}>
                 {images.map((image, index) => {
-                    // const aspectRatio: string = image.width > image.height ? "horizontal" : "vertical" // TODO colocar na função de guardar a imagem no json
                     return (
                         <a key={index} href={image.src} target={"_blank"} rel={"noopener noreferrer"}
                            onMouseEnter={() => setHoverIndex(index)}
