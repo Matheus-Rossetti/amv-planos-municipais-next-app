@@ -18,6 +18,16 @@ export default async function AllContainersPage() {
     const cityColor: BackgroundColor = getCityColor(plan.city)
     // let [ tabIndex, changeTabIndex ] = useState<number>(0)
 
+    const tabs = [
+        plan.startingTab,
+        plan.preparationsTab,
+        plan.lawTab,
+        plan.libraryTab,
+        ...plan.extraTabs
+    ] // Coloca todas as tabs em um array, assim podemos iterar por elas usando um index
+
+
+
     return (
         <div style={{
             backgroundColor: "#F3EFE8",
@@ -27,15 +37,11 @@ export default async function AllContainersPage() {
         }}>
             <TopBar planName={plan.name} color={cityColor}/>
             <div style={{display: "flex", flexDirection: "row", alignItems: "flex-start", minWidth: "100%"}}>
-                <Tab tabName={plan.startingTab.tabName} color={cityColor}/>
-                <Tab tabName={plan.preparationsTab.tabName} color={cityColor}/>
-                <Tab tabName={plan.lawTab.tabName} color={cityColor}/>
-                <Tab tabName={plan.libraryTab.tabName} color={cityColor}/>
-                {plan.extraTabs.map((tab, index) => {
-                        return (<Tab key={index} tabName={tab.tabName} color={cityColor}/>)
-                    }
-                )
-                }
+                {tabs.map((tab, index) => {
+                    return(
+                        <Tab key={index} tabName={tab.tabName} color={cityColor}/>
+                    )
+                })}
             </div>
             <div style={{
                 marginTop: "3vh"
