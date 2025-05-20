@@ -1,5 +1,5 @@
 import React from 'react';
-import {PdfInterface} from "@/container-interfaces/pdf-interface";
+import {PdfInterface} from "@/interfaces/pdf-interface";
 
 
 export const PdfContainer = ({containerTitle, pdfList, backgroundColor}: PdfInterface) => {

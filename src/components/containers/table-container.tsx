@@ -1,5 +1,5 @@
 import React from "react";
-import {TableInterface} from "@/container-interfaces/table-interface";
+import {TableInterface} from "@/interfaces/table-interface";
 
 export const TableContainer = ({containerTitle, columns, backgroundColor}: TableInterface) => {
 

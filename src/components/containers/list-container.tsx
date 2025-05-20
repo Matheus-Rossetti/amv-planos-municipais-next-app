@@ -1,5 +1,5 @@
 import React from "react";
-import {ListInterface} from "@/container-interfaces/list-interface";
+import {ListInterface} from "@/interfaces/list-interface";
 
 export const ListContainer = ({containerTitle, lists, backgroundColor}: ListInterface) => {
     return (

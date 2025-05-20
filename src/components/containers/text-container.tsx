@@ -1,5 +1,5 @@
 import React from 'react';
-import {TextInterface} from "@/container-interfaces/text-interface";
+import {TextInterface} from "@/interfaces/text-interface";
 
 export const TextContainer = ({containerTitle, text, backgroundColor}: TextInterface) => {
     return (

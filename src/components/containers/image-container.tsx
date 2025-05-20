@@ -1,7 +1,7 @@
 'use client'
 
 import React, {useState} from "react";
-import {ImageInterface} from "@/container-interfaces/image-interface";
+import {ImageInterface} from "@/interfaces/image-interface";
 
 export const ImageContainer = ({containerTitle, images, backgroundColor}: ImageInterface) => {
 
