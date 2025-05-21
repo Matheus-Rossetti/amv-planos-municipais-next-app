@@ -9,6 +9,8 @@ export class Plan {
         public startDate: number,
         public endDate: number,
         public archived: boolean,
+        public accepted: boolean, // Plano aceito e publicado para o público
+        public inProgress: boolean, // Plano ainda não terminado, durante o processo de inserção (Assim a pessoa pode salvar hoje e terminar amanhã)
         public version: number,
         public parentId: number | null,
         public lastModified: string,

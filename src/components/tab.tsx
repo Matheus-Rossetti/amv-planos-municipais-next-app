@@ -4,7 +4,7 @@ import React, {useState} from 'react';
 import {Property} from "csstype";
 import BackgroundColor = Property.BackgroundColor;
 
-export const Tab = ({tabName, color} : {tabName: string, color: BackgroundColor}) => {
+export const Tab = ({tabName, isCurrentTab, color} : {tabName: string, isCurrentTab: boolean,color: BackgroundColor}) => {
 
     const [isHovered, setIsHovered] = useState(false);
 
@@ -12,7 +12,7 @@ export const Tab = ({tabName, color} : {tabName: string, color: BackgroundColor}
 
         <div style={{
             backgroundColor: color,
-            opacity: isHovered ? 1 : 0.5,
+            opacity: isHovered || isCurrentTab ? 1 : 0.5,
             width: "10vw",
             height: "5vh",
             display: "flex",
