@@ -24,7 +24,7 @@ export default function ChoicePage() {
             }}>
                 Inserir plano
             </a>
-            <a  href={"/plano"}
+            <a  href={"/planos"}
                 style={{
                 width: "100%",
                 backgroundColor: "coral",

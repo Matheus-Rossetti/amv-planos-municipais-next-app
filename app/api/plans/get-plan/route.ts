@@ -9,7 +9,7 @@ export async function GET(req: NextRequest) {
     const id:number = Number(new URL(req.url).searchParams.get('id'))
 
     try{
-        const result = await getPlanService({id: id})
+        const result = await getPlanService(id)
         return NextResponse.json(result);
     }catch (e){
         // @ts-expect-error - ts complains about 'e' being -undefined-, but 'e' is always -string-

@@ -1,17 +1,16 @@
 import {dbConnect, dbDisconnect } from "@/db/client";
 
-export async function selectPlanWhereId(id: number) {
+export async function selectPlanWhereId(city: string) {
     const client = await dbConnect()
 
-    // TODO trocar o * pelos campos exatos para montar um objeto Plan, usando '*' o db manda um monte de metadados que são inúteis nessa situação e adicionam overhead
     try {
         const query = `
-            SELECT * FROM plans WHERE id = $1 
+            SELECT * FROM plans WHERE city = $1 
             `
-        const values = [id];
+        const values = [city];
         const result = await client.query(query, values);
         await dbDisconnect(client);
-        return result.rows[0];
+        return result.rows;
     }catch (e){
         await dbDisconnect(client)
         console.log(e)
