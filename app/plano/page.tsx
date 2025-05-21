@@ -22,7 +22,7 @@ export default function AllContainersPage() {
 
     const tabs = [
         plan.startingTab,
-        plan.preparationsTab,
+        plan.preparationTab,
         plan.lawTab,
         plan.libraryTab,
         ...plan.extraTabs
