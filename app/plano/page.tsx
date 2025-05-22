@@ -1,15 +1,15 @@
 'use client'
 
-import React, {useState} from "react";
+
+// TODO alterar para puxar o plano do db ou receber o plano de outro lugar
 import plan from "@/assets/plano-teste.json"
+import React, { useState } from "react";
 import {getCityColor} from "@/utils/get-city-color";
 import {TextContainer} from "@/components/containers/text-container";
 import {ListContainer} from "@/components/containers/list-container";
 import {ImageContainer} from "@/components/containers/image-container";
-import {PdfContainer} from "@/components/containers/pdf-container";
 import {Property} from "csstype";
 import BackgroundColor = Property.BackgroundColor;
-import {TableContainer} from "@/components/containers/table-container";
 import {TopBar} from "@/components/topbar";
 import {Tab} from "@/components/tab";
 import {PlanFooter} from "@/components/plan-footer";
