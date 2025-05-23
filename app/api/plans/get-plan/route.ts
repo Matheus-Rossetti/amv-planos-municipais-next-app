@@ -3,15 +3,15 @@ import {getPlanService} from "@/services/plans/get-plan-service";
 
 
 export async function GET(req: NextRequest) {
-
     // guarda o 'id' de parametro da url
     const id:number = Number(new URL(req.url).searchParams.get('id'))
-    console.log(`AQUI ESTÁ O ID: ${id}`)
+    if(!id){return NextResponse.json({ error: "Id necessário!" }, {status: 400 })}
+
     try{
         const result = await getPlanService(id)
         return NextResponse.json(result);
     }catch (e){
-        // @ts-expect-error - ts complains about 'e' being -undefined-, but 'e' is always -string-
-        return NextResponse.json({message: 'Falha ao recuperar o plano: ', error: e.message}, {status: 400});
+        console.log(e)
+        return NextResponse.json({ error: 'Erro interno.' }, { status: 500 } );
     }
 }

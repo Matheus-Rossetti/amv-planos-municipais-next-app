@@ -3,7 +3,7 @@
 import React from 'react'
 import plans from "@/assets/planos.json"
 
-export default function Planos() {
+export default function Plans() {
 
     return (
         <div style={{ display: "flex", flexDirection: "column"}}>
@@ -20,14 +20,13 @@ export default function Planos() {
             margin: "10em",
             flexWrap: "wrap",
         }}>
-
             {/* ------------- PLAN CARD ------------- */}
             {plans.map((plan, index) => {
                 return (
                     <div key={index}
                          style={{
                              height: "30em",
-                             width: "20em",
+                             width: "23em",
                              borderRadius: "15px",
                              backgroundColor: "beige",
                              display: "flex",
@@ -57,8 +56,6 @@ export default function Planos() {
                     </div>
                 )
             })}
-
-
         </div>
         </div>
     )

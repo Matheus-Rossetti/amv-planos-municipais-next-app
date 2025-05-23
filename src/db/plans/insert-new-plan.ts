@@ -27,12 +27,11 @@ export async function insertNewPlan(plan: Plan){
             JSON.stringify(plan.extraTabs)
         ];
         await client.query(query, values);
-        console.log('deu boa!')
+        console.log(`Plano ${plan.name} inserido com sucesso!`)
         await dbDisconnect(client);
     }catch (e) {
         await dbDisconnect(client);
-        // @ts-expect-error - ts complains about 'e' being -undefined-, but 'e' is always -string-
-        throw new Error(`Não foi possível inserir o usuário no banco de dados: ${e.message}`);
+        throw new Error(`Erro ao inserir o plano ${plan.name}.`, { cause: e } );
     }
 
 }

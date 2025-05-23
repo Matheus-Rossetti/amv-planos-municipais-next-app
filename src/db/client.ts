@@ -14,21 +14,19 @@ const pool = new Pool({
 export async function dbConnect(){
     try {
         const client = await pool.connect();
-        console.log("Conexão estabelecida");
+        console.log("Conexão com o banco de dados estabelecida!");
         return client;
     } catch (e){
-        console.log("Erro: ", e)
-        // @ts-expect-error - ts complains about 'e' being -undefined-, but 'e' is always -string-
-        throw new Error(`A conexão com o banco de dados falhou ${e.message}`);
+        throw new Error("Erro ao tentar conectar com o banco de dados", { cause: e });
     }
 }
 
 export async function dbDisconnect(client: PoolClient){
     try {
         client.release();
-        console.log("Conexão finalizada");
+        console.log("Conexão com o banco de dados finalizada");
         return client;
     } catch (e){
-        console.log("Erro: ", e)
+        throw new Error("Erro ao tentar desconectar do banco de dados. ", { cause: e })
     }
 }

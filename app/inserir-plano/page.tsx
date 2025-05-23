@@ -3,7 +3,7 @@
 import React from "react"
 
 
-export default function InserirPlano( /* receber um objeto Plan pronto ou vazio */ ) {
+export default function InsertPlan( /* receber um objeto Plan pronto ou vazio */ ) {
 
     async function handleClick() {
         const res = await fetch('/api/plans/create-plan', { method: 'POST' })

@@ -8,7 +8,7 @@ export const TopBar = ({planName, color}:{planName: string, color: BackgroundCol
             backgroundColor: color,
             width: "100%",
             flexDirection: "column",
-            height: "17vh",
+            height: "15vh",
             display: "flex",
             alignItems: "center" ,
             // justifyContent: "center",

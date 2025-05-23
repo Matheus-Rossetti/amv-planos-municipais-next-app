@@ -1,15 +1,17 @@
 import { createPlanService } from "@/services/plans/create-plan-service";
 import { NextResponse } from "next/server";
+import {Plan} from "@/models/plan-model";
 
 export async function POST() {
 
+    // TODO pegar o plan a partir de um json no body da requisição e instanciar o objeto
+    const plan: Plan
+
     try{
-        await createPlanService()
+        await createPlanService(plan)
         return NextResponse.json({message: `Plano criado com sucesso!`});
     }catch (e){
-
         console.log(e)
-        // @ts-expect-error - ts complains about 'e' being -undefined-, but 'e' is always -string-
-        return NextResponse.json({message: 'Falha ao criar o plano: ', error: e.message}, {status: 400});
+        return NextResponse.json({ error: "Erro interno." }, { status: 500 });
     }
 }
