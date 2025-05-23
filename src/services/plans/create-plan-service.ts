@@ -118,6 +118,6 @@ export async function createPlanService(plan: Plan){
         console.log(`Inserindo plano ${plan.name}...`)
         await insertNewPlan(plan)
     }catch (e){
-        throw new Error(`Erro ao processar o service de inserir um plano no banco de dados.`, { cause: e });
+        throw new Error(`Erro no service de inserir um plano.`, { cause: e });
     }
 }

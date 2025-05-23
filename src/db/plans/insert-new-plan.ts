@@ -11,15 +11,14 @@ export async function insertNewPlan(plan: Plan){
             VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)
             `;
         const values = [
-                plan.createdBy,
-                plan.name,
-                plan.description,
-                plan.city,
+            plan.createdBy,
+            plan.name,
+            plan.description,
+            plan.city,
             plan.startDate,
             plan.endDate,
             plan.version,
-
-           JSON.stringify(plan.startingTab),
+            JSON.stringify(plan.startingTab),
             JSON.stringify(plan.preparationTab),
             JSON.stringify(plan.lawTab),
             JSON.stringify(plan.goalsTab),
@@ -27,11 +26,10 @@ export async function insertNewPlan(plan: Plan){
             JSON.stringify(plan.extraTabs)
         ];
         await client.query(query, values);
-        console.log(`Plano ${plan.name} inserido com sucesso!`)
+        console.log(`Plano ${ plan.name } inserido com sucesso!`)
         await dbDisconnect(client);
     }catch (e) {
         await dbDisconnect(client);
         throw new Error(`Erro ao inserir o plano ${plan.name}.`, { cause: e } );
     }
-
 }

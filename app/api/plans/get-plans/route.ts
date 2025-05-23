@@ -3,7 +3,7 @@ import {getPlansService} from "@/services/plans/get-plans-service";
 
 
 export async function GET(req: NextRequest) {
-    // guarda o 'city' de parametro da url
+    // guarda o 'city' de parâmetro da url
     const city:string | null = new URL(req.url).searchParams.get('city')
     if (!city){return NextResponse.json({ error: 'Municipio necessário!' }, { status: 400 });}
 
